@@ -1,0 +1,119 @@
+<section class="section hero">
+  <div class="container hero__container">
+    <div class="hero__wrapper">
+      <h1 class="section-title hero__title">hero</h1>
+
+      <div class="hero__tablet-wrap">
+        <div class="hero__thumb">
+          <ul class="list hero__list">
+            <li class="hero__item">
+              <svg class="hero__svg">
+                <use href="./assets/images/sprite.svg#icon-js"></use>
+              </svg>
+            </li>
+            <li class="hero__item">
+              <svg class="hero__svg">
+                <use href="./assets/images/sprite.svg#icon-php"></use>
+              </svg>
+            </li>
+            <li class="hero__item">
+              <svg class="hero__svg">
+                <use href="./assets/images/sprite.svg#icon-css"></use>
+              </svg>
+            </li>
+          </ul>
+
+          <picture>
+            <source
+              srcset="
+                ./assets/images/hero/hero-ellipse@1x.webp 1x,
+                ./assets/images/hero/hero-ellipse@2x.webp 2x
+              "
+              media="(min-width: 1280px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./assets/images/hero/hero-ellipse@2x.png 2x,
+                ./assets/images/hero/hero-ellipse@1x.png 1x
+              "
+              media="(min-width: 1280px)"
+              type="image/png"
+            />
+
+            <source
+              srcset="
+                ./assets/images/hero/tablet/hero-ellipse-tablet@1x.png 1x,
+                ./assets/images/hero/tablet/hero-ellipse-tablet@2x.png 2x
+              "
+              media="(min-width: 768px)"
+              type="image/png"
+            />
+            <source
+              srcset="
+                ./assets/images/hero/tablet/hero-ellipse-tablet@1x.webp 1x,
+                ./assets/images/hero/tablet/hero-ellipse-tablet@2x.webp 2x
+              "
+              media="(min-width: 768px)"
+              type="image/webp"
+            />
+
+            <img
+              class="hero__elipse"
+              src="./assets/images/hero/hero-ellipse@1x.png"
+              alt="hero-elipse"
+              width="417"
+              height="417"
+              loading="lazy"
+            />
+          </picture>
+
+          <picture>
+            <source
+              srcset="
+                ./assets/images/hero/hero-boy@1x.webp 1x,
+                ./assets/images/hero/hero-boy@2x.webp 2x
+              "
+              media="(min-width: 1280px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./assets/images/hero/hero-boy@1x.png 1x,
+                ./assets/images/hero/hero-boy@2x.png 2x
+              "
+              media="(min-width: 1280px)"
+              type="image/png"
+            />
+
+            <source
+              srcset="
+                ./assets/images/hero/tablet/hero-boy-tablet@1x.webp 1x,
+                ./assets/images/hero/tablet/hero-boy-tablet@2x.webp 2x
+              "
+              media="(min-width: 768px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./assets/images/hero/tablet/hero-boy-tablet@1x.png 1x,
+                ./assets/images/hero/tablet/hero-boy-tablet@2x.png 2x
+              "
+              media="(min-width: 768px)"
+              type="image/png"
+            />
+
+            <img
+              class="hero__img"
+              src="./assets/images/hero/hero-boy@1x.png"
+              alt="hero-boy"
+              width="330"
+              height="476"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

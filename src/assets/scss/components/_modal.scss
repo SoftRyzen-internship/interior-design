@@ -1,0 +1,92 @@
+.backdrop {
+  visibility: visible;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  z-index: 100;
+  overflow: auto;
+  transition: opacity 0.2s;
+
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, 0) scale(1);
+  width: 100%;
+  max-width: 630px;
+  min-height: 640px;
+  padding: 76px 20px;
+
+  border-radius: 12px;
+  background-color: var(--white-bg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: repeat-y;
+  transition: transform 0.3s linear 0.2s;
+
+  background-image: linear-gradient(
+    to bottom,
+    #fff,
+    #fff 37px,
+    var(--primary-bg) 37px,
+    var(--primary-bg) 100%
+  );
+  background-repeat: no-repeat;
+
+  @include mq(tablet) {
+    padding: 76px 110px;
+  }
+
+  &::after {
+    display: block;
+    position: absolute;
+    content: '';
+
+    top: 12.8px;
+    left: 15px;
+
+    width: 47.5px;
+    height: 10px;
+
+    background-image: url(../images/dots.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .is-hidden & {
+    transform: translate(-50%, 100%) scale(0);
+  }
+}
+
+.btn-close {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../images/icon-close.svg');
+  background-color: #fff;
+  outline: none;
+
+  &:focus {
+    border: 1.5px solid rgba(255, 255, 255, 0.75);
+  }
+}

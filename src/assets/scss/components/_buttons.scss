@@ -1,0 +1,33 @@
+.btn {
+  display: inline-block;
+  padding: 18px 28px;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 5px;
+
+  color: var(--white-txt-cl);
+  background-color: var(--accent-cl);
+
+  transition: color var(--fast) linear, background-color var(--fast) linear,
+    border var(--fast) linear;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-cl);
+    border: 1px solid var(--accent-cl);
+    background-color: var(--white-bg);
+  }
+
+  @include mq(mobile-only) {
+    min-width: 250px;
+    max-width: 280px;
+  }
+  @include mq(tablet) {
+    padding: 18px 52px;
+  }
+}

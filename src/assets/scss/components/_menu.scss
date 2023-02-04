@@ -1,0 +1,35 @@
+.header__container {
+  .nav {
+    display: none;
+    @include mq(desktop) {
+      display: block;
+    }
+    @include mq(desktop) {
+      margin-left: auto;
+    }
+  }
+  .nav-list {
+    @include mq(tablet) {
+      display: flex;
+    }
+  }
+  .nav-item:not(:last-child) {
+    margin-right: 20px;
+    @include mq(desktop) {
+      margin-right: 50px;
+    }
+  }
+  .nav-link {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: inherit;
+    color: var(--secondary-txt-cl);
+
+    transition: color var(--fast) linear;
+
+    &:hover,
+    &:focus {
+      color: var(--accent-cl);
+    }
+  }
+}

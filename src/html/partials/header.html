@@ -1,0 +1,28 @@
+<header class="header">
+  <div class="container header__container">
+    <a href="./" aria-label="logo ">
+      <img
+        class="logo"
+        src="./assets/images/logo-dark.svg"
+        alt="GoIT logo"
+        width="67"
+        height="20"
+      />
+    </a>
+    {% include 'components/nav-menu.html' %}
+    <button type="button" class="mobile-menu-btn" data-menu-btn aria-label="otwórz menu mobilne">
+      <svg class="mobile-menu-svg" width="30" height="20">
+        <use href="./assets/images/sprite.svg#icon-mobile-menu"></use>
+      </svg>
+    </button>
+    <button
+      type="button"
+      class="btn btn-modal tablet-menu-btn"
+      data-menu-btn
+      aria-label="otwórz menu tabletu"
+    >
+      show form
+    </button>
+  </div>
+</header>
+{% include 'components/mobile-menu.html' %}

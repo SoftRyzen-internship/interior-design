@@ -1,0 +1,19 @@
+{% set lang = "pl" %} {% set title = "New Project" %}
+
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+
+<head>
+  {%include 'head.html' %}
+</head>
+
+<body>
+  {% include 'gtm.html' %}
+
+  <div class="page">{% block content %} {% endblock %}</div>
+
+  {% include 'modal.html' %}
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>

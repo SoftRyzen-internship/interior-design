@@ -1,0 +1,59 @@
+@function HexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+:root {
+  --accent-cl: #ff6b08;
+  --secondary-accent-cl: #9f4615;
+
+  /* TEXT COLORS */
+  --primary-txt-cl: #0b1d4f;
+  --secondary-txt-cl: #00336a;
+  --white-txt-cl: #ffffff;
+  --white-txt-rgb: #{HexToRGB(#ffffff)};
+  --gray-txt-cl: #adadad;
+  --black-txt-cl: #2b2b2b;
+  --course-txt-cl: #2727bb;
+  --menu-txt-cl: #d6e7ff;
+
+  /* BACKGROUND COLORS */
+  --primary-bg: #f6faff;
+  --primary-bg-rgb: #{HexToRGB(#f6faff)};
+  --secondary-bg: #d9e5ff;
+  --secondary-bg-rgb: #{HexToRGB(#d9e5ff)};
+  --white-bg: #ffffff;
+  --white-bg-rgb: #{HexToRGB(#ffffff)};
+  --blue-bg: #4141e4;
+  --blue-bg-rgb: #{HexToRGB(#4141e4)};
+  --secondary-btn-bg: #017d49;
+  --tabs-checked-bd: #bcd1ef;
+  --gradient-bg: #0b0b4c;
+  --gradient-bg-rgb: #{HexToRGB(#0b0b4c)};
+  --faq-border-bg: #c9e1ff;
+
+  /* BORDER */
+  --primary-border-color: #d6e7ff;
+  --secondary-border-color: #d9e5ff;
+  --blue-border-color: #7070ff;
+  --before-border-color: #7979ed;
+
+  /* SHADOW */
+
+  --secondary-shadow: 0px 100px 80px rgba(38, 37, 66, 0.07),
+    0px 41.7776px 33.4221px rgba(36, 32, 138, 0.0503198),
+    0px 22.3363px 17.869px rgba(36, 32, 138, 0.0417275),
+    0px 12.5216px 10.0172px rgba(36, 32, 138, 0.035),
+    0px 6.6501px 5.32008px rgba(36, 32, 138, 0.0282725),
+    0px 2.76726px 2.21381px rgba(36, 32, 138, 0.0196802);
+
+  /* FONTS */
+  --main-font: 'Lato', sans-serif;
+
+  --grid-item: 1;
+  --grid-mr-left: 30px;
+  --grid-mr-top: 30px;
+
+  /* ANIMATIONS SPEED */
+  --fast: 0.2s;
+  --slow: 0.4s;
+}

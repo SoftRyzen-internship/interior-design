@@ -1,0 +1,131 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  overflow-y: scroll;
+  padding: 105px 0;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  background: linear-gradient(180deg, rgba(var(--gradient-bg-rgb), 0.8) 0%, var(--gradient-bg) 100%),
+    url(../images/menu/programmer-mobile.png);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include mq(retina) {
+    background: linear-gradient(
+        180deg,
+        rgba(var(--gradient-bg-rgb), 0.8) 0%,
+        var(--gradient-bg) 100%
+      ),
+      url(../images/menu/programmer-mobile@2x.png);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @include mq(tablet) {
+    background: linear-gradient(
+        180deg,
+        rgba(var(--gradient-bg-rgb), 0.8) 0%,
+        var(--gradient-bg) 100%
+      ),
+      url(../images/menu/programmer-tablet.png);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include mq(retina) {
+      background: linear-gradient(
+          180deg,
+          rgba(var(--gradient-bg-rgb), 0.8) 0%,
+          var(--gradient-bg) 100%
+        ),
+        url(../images/menu/programmer-tablet@2x.png);
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &.is-open {
+    visibility: visible;
+    pointer-events: all;
+    opacity: 1;
+    transition: transform var(--slow) ease-in-out, opacity var(--fast) linear;
+  }
+  @include mq(tablet) {
+    padding: 143px 0;
+  }
+  @include mq(desktop) {
+    display: none;
+  }
+
+  &-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    content: 'close menu';
+
+    top: 20px;
+    right: 20px;
+
+    @include mq(tablet) {
+      right: 60px;
+    }
+  }
+  &-close-svg {
+    fill: var(--accent-cl);
+    @include mq(tablet) {
+      width: 51px;
+      height: 51px;
+    }
+  }
+  &-logo {
+    display: block;
+    position: absolute;
+    content: 'site logo';
+
+    top: 30px;
+    left: 20px;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-item:not(:last-child) {
+    margin-bottom: 25px;
+    @include mq(desktop) {
+      margin-bottom: 40px;
+    }
+  }
+  .nav-link {
+    font-size: 24px;
+    line-height: 1.5;
+    font-family: inherit;
+    color: var(--menu-txt-cl);
+
+    transition: color var(--fast) linear;
+
+    @include mq(tablet) {
+      font-size: 48px;
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--accent-cl);
+    }
+  }
+}
