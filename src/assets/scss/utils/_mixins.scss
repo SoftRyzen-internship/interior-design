@@ -23,12 +23,12 @@
 
 /* MEDIA QUERIES*/
 @mixin mq($range) {
-  $mobile: 480px;
+  $mobile: 375px;
   $tablet: 768px;
-  $desktop: 1280px;
+  $desktop: 1440px;
 
   @if $range == mobile-only {
-    @media (max-width: $tablet - 0.02) {
+    @media (max-width: #{$tablet - 0.02}) {
       @content;
     }
   } @else if $range == mobile {

@@ -1,4 +1,4 @@
-import $ from 'jquery';
+/* import $ from 'jquery';
 
 $(document).ready(function() {
   const openModalBtn = document.querySelectorAll('.btn-modal');
@@ -41,3 +41,4 @@ $(document).ready(function() {
   backdrop.addEventListener('mousedown', handleClose);
   closeModalBtn.addEventListener('click', toggleModal);
 });
+ */

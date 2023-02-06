@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', function () {
+/* window.addEventListener('DOMContentLoaded', function () {
   const items = document.querySelectorAll('.accordion button');
 
   if (items) {
@@ -17,3 +17,4 @@ window.addEventListener('DOMContentLoaded', function () {
     items.forEach(item => item.addEventListener('click', toggleAccordion));
   }
 });
+ */

@@ -1,4 +1,4 @@
-import { CountUp } from 'countup.js';
+/* import { CountUp } from 'countup.js';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -153,3 +153,4 @@ gsap.utils.toArray('.gs_reveal').forEach(function (elem) {
     },
   });
 });
+ */

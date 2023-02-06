@@ -1,4 +1,4 @@
-import $ from 'jquery';
+/* import $ from 'jquery';
 
 $(document).ready(function () {
   const links = document.querySelectorAll('.nav-link');
@@ -67,3 +67,4 @@ export function smoothScroll(eID) {
     timer++;
   }
 }
+ */
