@@ -1,0 +1,73 @@
+.form {
+  @include mq(tablet) {
+    display: flex;
+    align-items: center;
+    gap: 66px;
+  }
+  @include mq(desktop) {
+    gap: 230px;
+  }
+
+  &__menu {
+    max-width: 335px;
+    @include mq(desktop) {
+      max-width: 400px;
+    }
+  }
+
+  &__line {
+    position: relative;
+    min-width: 280px;
+    text-align: center;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 8px 0;
+    font-size: 16px;
+    color: #414141;
+    margin-bottom: 40px;
+    border: none;
+    border-bottom: 1px solid rgba(65, 65, 65, 0.4);
+    outline: none;
+    background: transparent;
+    @include mq(tablet) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__input:focus ~ label,
+  &__input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: rgba(65, 65, 65, 0.8);
+    font-size: 12px;
+  }
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #414141;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+
+  &__button {
+    display: inline-flex;
+    gap: 20px;
+    line-height: 1.63;
+    @include mq(tablet) {
+      gap: 54px;
+      font-size: 18px;
+      line-height: 1.44;
+    }
+    @include mq(desktop) {
+      gap: 43px;
+      font-size: 24px;
+      line-height: 1.33;
+    }
+  }
+}

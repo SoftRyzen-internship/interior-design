@@ -1,3 +1,22 @@
-<form action="">
-    Form
+<form action="#" class="contact-us__form form" method="POST" enctype="multipart/form-data">
+  <div class="form__menu">
+    <div class="form__line">
+      <input class="form__input" required id="name" autocomplete="off" name="name" type="text" />
+      <label class="form__label" for="name">Name</label>
+    </div>
+    <div class="form__line">
+      <input class="form__input" required id="phone" autocomplete="on" name="phone" type="tel" />
+      <label class="form__label" for="phone">Contact number</label>
+    </div>
+    <div class="form__line">
+      <input class="form__input" id="message" autocomplete="off" name="message" required />
+      <label class="form__label" for="message">Several words about your project</label>
+    </div>
+  </div>
+  <div class="form__line">
+    <button type="submit" class="form__button button">
+      <span>Send a request</span>
+      <span>arrow</span>
+    </button>
+  </div>
 </form>
