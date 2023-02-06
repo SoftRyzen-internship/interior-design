@@ -1,4 +1,4 @@
-(() => {
+/* (() => {
   const openMenuBtn = document.querySelector('[data-menu-btn]');
   const mobileMenu = document.querySelector('[data-menu]');
   const btnMenuClose = document.querySelector('[data-menu-close-btn]');
@@ -32,3 +32,4 @@
     btnMenuClose.removeEventListener('click', toggleMenu);
   }
 })();
+ */

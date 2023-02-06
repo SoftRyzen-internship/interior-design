@@ -35,34 +35,8 @@
   background-repeat: repeat-y;
   transition: transform 0.3s linear 0.2s;
 
-  background-image: linear-gradient(
-    to bottom,
-    #fff,
-    #fff 37px,
-    var(--primary-bg) 37px,
-    var(--primary-bg) 100%
-  );
-  background-repeat: no-repeat;
-
   @include mq(tablet) {
     padding: 76px 110px;
-  }
-
-  &::after {
-    display: block;
-    position: absolute;
-    content: '';
-
-    top: 12.8px;
-    left: 15px;
-
-    width: 47.5px;
-    height: 10px;
-
-    background-image: url(../images/dots.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
   }
 
   .is-hidden & {

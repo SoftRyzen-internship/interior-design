@@ -1,4 +1,4 @@
-let tab = function() {
+/* let tab = function() {
   let tabBox = document.querySelectorAll('.tabs__item');
   let tabBtn = document.querySelectorAll('.tabs__btn');
 
@@ -17,3 +17,4 @@ let tab = function() {
   }
 };
 export default tab;
+ */
