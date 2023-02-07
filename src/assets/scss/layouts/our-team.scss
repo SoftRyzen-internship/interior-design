@@ -1,0 +1,24 @@
+.team__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+
+    .team__list-item {
+        width: 240px;
+    }
+
+    .team__text-wrapper {
+        margin-top: 8px;
+    }
+
+    .team__text {
+        font-size: 14px;
+        color: var(--secondary-black-txt-cl);
+        line-height: calc(24 / 14);
+    }
+    .team__text-title {
+        line-height: calc(26 / 16);
+    }
+}
