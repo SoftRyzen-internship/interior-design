@@ -21,6 +21,12 @@
     }
   }
 
+  &__line:last-child {
+    @include mq(tablet) {
+      margin-bottom: 0;
+    }
+  }
+
   &__input {
     width: 100%;
     padding: 8px 0;
