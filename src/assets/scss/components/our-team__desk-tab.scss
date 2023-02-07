@@ -49,12 +49,22 @@
     font-size: 16px;
     color: var(--secondary-black-txt-cl);
     line-height: calc(26 / 16);
+
+    @include mq(desktop) {
+        font-size: 18px;
+        line-height: calc(30 / 18);
+      }
   }
 
   .swiper__text-title {
     font-size: 20px;
     color: var(--secondary-black-txt-cl);
     line-height: calc(26 / 16);
+
+    @include mq(desktop) {
+      font-size: 24px;
+      line-height: calc(32 / 24);
+    }
   }
 
   .swiper__list-img {
