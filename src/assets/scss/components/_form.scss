@@ -2,10 +2,10 @@
   @include mq(tablet) {
     display: flex;
     align-items: center;
-    gap: 66px;
+    gap: 50px;
   }
   @include mq(desktop) {
-    gap: 230px;
+    gap: 210px;
   }
 
   &__line {
@@ -70,19 +70,32 @@
   }
 
   &__button {
+    padding-left: 11px;
+    border: 1px solid transparent;
+    border-radius: 100px;
     display: inline-flex;
     align-items: center;
     gap: 20px;
     line-height: calc(26 / 16);
+    transition: border var(--slow);
     @include mq(tablet) {
+      padding-left: 16px;
       gap: 54px;
       font-size: 18px;
       line-height: calc(26 / 18);
     }
     @include mq(desktop) {
+      padding-left: 20px;
       gap: 43px;
       font-size: 24px;
       line-height: calc(32 / 24);
+    }
+    &:hover {
+      border: 1px solid var(--secondary-black-txt-cl);
+      border-radius: 100px;
+      .form__icon {
+        border: 1px solid transparent;
+      }
     }
   }
   &__icon {
@@ -92,6 +105,7 @@
     padding-right: 12px;
     border: 1px solid var(--secondary-black-txt-cl);
     border-radius: 50%;
+    transition: border var(--slow);
     @include mq(tablet) {
       width: 76px;
       height: 76px;
