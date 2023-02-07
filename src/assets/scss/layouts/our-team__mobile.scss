@@ -25,7 +25,7 @@
     line-height: calc(24 / 14);
   }
   .team__text-title {
-    line-height: calc(26 / 16);
+    line-height: calc(28 / 20);
   }
 }
 
@@ -35,6 +35,10 @@
   align-items: center;
   gap: 28px;
   margin-top: 32px;
+
+  @include mq(tablet) {
+    display: none;
+  }
 }
 
 .team__icon-wrapper {
