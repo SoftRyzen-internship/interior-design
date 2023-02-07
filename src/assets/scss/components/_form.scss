@@ -19,21 +19,20 @@
     position: relative;
     min-width: 280px;
     text-align: center;
+    margin-bottom: 40px;
+    @include mq(tablet) {
+      margin-bottom: 60px;
+    }
   }
 
   &__input {
     width: 100%;
     padding: 8px 0;
-    font-size: 16px;
-    color: #414141;
-    margin-bottom: 40px;
+    color: var(--secondary-black-txt-cl);
     border: none;
     border-bottom: 1px solid rgba(65, 65, 65, 0.4);
     outline: none;
     background: transparent;
-    @include mq(tablet) {
-      margin-bottom: 60px;
-    }
   }
 
   &__input:focus ~ label,
@@ -44,30 +43,37 @@
     font-size: 12px;
   }
 
+  &__input:valid ~ label {
+    color: rgba(7, 118, 7, 0.8);
+  }
+
+  // &__input:invalid ~ label {
+  //   color: rgb(173, 52, 52);
+  // }
+
   &__label {
     position: absolute;
-    top: 0;
+    top: 5px;
     left: 0;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #414141;
+    color: var(--secondary-black-txt-cl);
     pointer-events: none;
-    transition: 0.5s;
+    transition: var(--slow);
+    background-color: white;
   }
 
   &__button {
     display: inline-flex;
     gap: 20px;
-    line-height: 1.63;
+    line-height: calc(26 / 16);
     @include mq(tablet) {
       gap: 54px;
       font-size: 18px;
-      line-height: 1.44;
+      line-height: calc(26 / 18);
     }
     @include mq(desktop) {
       gap: 43px;
       font-size: 24px;
-      line-height: 1.33;
+      line-height: calc(32 / 24);
     }
   }
 }
