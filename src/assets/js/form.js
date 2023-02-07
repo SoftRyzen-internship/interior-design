@@ -1,6 +1,4 @@
 const form = document.querySelector('form');
-const label = document.querySelector('label');
-const input = document.querySelector('input');
 
 form.addEventListener('submit', onHandleSubmit);
 

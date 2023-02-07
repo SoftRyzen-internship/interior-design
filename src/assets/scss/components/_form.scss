@@ -31,21 +31,26 @@
     background: transparent;
   }
 
-  &__input:focus ~ label,
-  &__input:valid ~ label {
+  &__input:focus ~ .form__label,
+  &__input:valid ~ .form__label,
+  &__input:not(:placeholder-shown) ~ .form__label {
     top: -20px;
     left: 0;
     color: rgba(65, 65, 65, 0.8);
     font-size: 12px;
   }
 
-  &__input:valid ~ label {
-    color: rgba(7, 118, 7, 0.8);
+  &__input:valid ~ .form__label {
+    color: rgba(7, 118, 7);
   }
 
-  // &__input:invalid ~ label {
-  //   color: rgb(173, 52, 52);
-  // }
+  &__input:invalid ~ .form__label {
+    color: rgb(212, 50, 9);
+  }
+
+  &__input:not(:focus):invalid ~ label {
+    color: rgba(65, 65, 65, 0.8);
+  }
 
   &__label {
     position: absolute;
