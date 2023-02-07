@@ -28,8 +28,6 @@ p {
   margin-bottom: 0;
 }
 
-
-
 img {
   display: block;
   max-width: 100%;
@@ -97,16 +95,65 @@ button {
   }
 }
 
-.subtitle {
-  margin-bottom: 24px;
-
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 1.5;
-
+.headline {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 89px;
+    width: 200%;
+    height: 1px;
+    background-color: var(--line-color);
+    @include mq(tablet) {
+      top: 30px;
+      left: 177px;
+    }
+    @include mq(desktop) {
+      top: 40px;
+      left: 210px;
+    }
+  }
+}
+.number {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
-
-  color: var(--secondary-txt-cl);
+  border: 1px solid var(--black-txt-cl);
+  border-radius: 50%;
+  font-size: 20px;
+  @include mq(tablet) {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 28px;
+  }
+  @include mq(desktop) {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 36px;
+  }
+}
+.subtitle {
+  position: absolute;
+  left: 89px;
+  bottom: -12px;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  @include mq(tablet) {
+    left: 177px;
+    bottom: -14px;
+    font-size: 18px;
+    line-height: calc(26 / 18);
+  }
+  @include mq(desktop) {
+    left: 210px;
+    bottom: -16px;
+    font-size: 24px;
+    line-height: calc(32 / 24);
+  }
 }
 
 .logo {
