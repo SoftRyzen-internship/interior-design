@@ -97,10 +97,33 @@
 
 .footer-nav__link,
 .address__link {
+  display: inline-block;
+  position: relative;
   text-align: center;
   font-size: 14px;
   line-height: 1.71;
   color: var(--secondary-black-txt-cl);
+
+  transition-property: color;
+  &:hover {
+    color: var(--black-txt-cl);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -1px;
+    left: 0;
+    background-color: var(--black-txt-cl);
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-in;
+    transform: scaleX(0);
+  }
+  &:hover::after {
+    transform: scaleX(1);
+  }
 
   @include mq(desktop) {
     font-size: 16px;
@@ -124,9 +147,16 @@
 }
 
 .fcontacts-socnav__icon {
-  fill: var(--black-txt-cl);
+  fill: var(--secondary-black-txt-cl);
   width: 24px;
   height: 24px;
+
+  transition-property: transform, fill;
+  transition-duration: 500ms;
+  &:hover {
+    fill: var(--black-txt-cl);
+    transform: scale(1.2);
+  }
 
   @include mq(desktop) {
     width: 32px;
