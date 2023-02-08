@@ -1,0 +1,172 @@
+.hero {
+
+  padding-top: 0;
+  padding-bottom: 60px;
+
+
+  @include mq(tablet-only) {
+    padding-top: 248px;
+    padding-bottom: 582px;
+  }
+
+  @include mq(desktop) {
+    padding-top: 292px;
+    padding-bottom: 393px;
+  }
+
+}
+
+.hero__container {
+  position: relative;
+}
+
+.hero__info {
+  margin-top: 40px;
+
+  @include mq(tablet) {
+    max-width: 533px;
+    position: relative;
+    padding: 20px;
+    border-radius: 8px;
+    top: 0;
+    left: 0;
+    background: rgba(254, 254, 254, 0.3);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  @include mq(desktop) {
+
+    max-width: 543;
+    flex-direction: column;
+    align-items: end;
+  }
+}
+
+.hero__button {
+  width: 71px;
+  height: 71px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--black-txt-cl);
+  border-radius: 50%;
+  flex-shrink: 0;
+
+  @include mq(tablet) {
+    display: none;
+  }
+}
+
+.hero__text {
+  @include mq(tablet) {
+    font-size: 18px;
+    line-height: calc(28/18);
+  }
+
+  @include mq(desktop) {
+    max-width: 344px;
+    font-size: 24px;
+    line-height: calc(36/24);
+  }
+}
+
+.hero__img {
+  img {
+    width: 100%;
+  }
+
+  @include mq(tablet) {
+    display: none;
+  }
+}
+
+.hero__headline {
+  font-size: 40px;
+  line-height: calc(48/40);
+  font-weight: 400;
+
+  @include mq(tablet) {
+    font-size: 48px;
+  }
+
+  @include mq(desktop) {
+    font-size: 62px;
+  }
+}
+
+
+.hero__text-container {
+  margin-top: 5px;
+  display: flex;
+  gap: 16px;
+}
+
+.hero__tablet-desctop-img {
+  display: none;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+
+  @include mq(tablet) {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    max-height: 1024px;
+  }
+
+  @include mq(desktop) {
+    max-width: 762px;
+    margin-left: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.hero__button-tablet {
+  display: none;
+
+  @include mq(tablet) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    border: 1px solid var(--black-txt-cl);
+    border-radius: 50%;
+  }
+
+  @include mq(desktop) {
+    width: 123px;
+    height: 123px;
+    position: relative;
+    right: -62px;
+  }
+}
+
+.hero__arrow-big {
+  width: 56px;
+  height: 6px;
+
+  @include mq(desktop) {
+    width: 70px;
+    height: 8px;
+  }
+}
+
+.hero__info-container {
+  @include mq(desktop) {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+}
