@@ -1,8 +1,8 @@
 .swiper {
-  height: 306px;
   width: 508px;
   margin: 0 auto;
   display: none;
+  overflow: hidden;
 
   @include mq(tablet) {
     display: block;
@@ -14,7 +14,6 @@
 
   .swiper-wrapper {
     display: flex;
-    width: 100%;
   }
 
   .swiper-slide {
@@ -28,13 +27,6 @@
       width: 320px;
     }
   }
-
-  /* .swiper-slide > picture {
-        display: block;
-        object-fit: cover;
-        width: 240px;
-        height: 240px;
-    } */
 
   .swiper__text-wrapper {
     width: 240px;
@@ -77,54 +69,52 @@
       height: 320px;
     }
   }
+}
 
-  .swiper-button-prev {
-    position: relative;
-    width: 44px;
-    height: 44px;
-    bottom: 170px;
-    right: 80px;
+.swiper-button-prev {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  bottom: 180px;
 
-    @include mq(desktop) {
-      bottom: 240px;
-      right: 100px;
-    }
+  @include mq(desktop) {
+    bottom: 256px;
   }
+}
 
-  .swiper-button-next {
-    position: relative;
-    width: 44px;
-    height: 44px;
-    bottom: 215px;
-    left: 540px;
+.swiper-button-next {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  bottom: 224px;
+  left: 640px;
 
-    @include mq(desktop) {
-      bottom: 285px;
-      left: 1080px;
-    }
+  @include mq(desktop) {
+    left: 1195px;
+    bottom: 300px;
   }
+}
 
-  .swiper__btn {
-    display: block;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    border: 1px solid black;
-  }
+.swiper__btn {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
 
-  .swiper__icon-prev {
-    width: 45px;
-    height: 12px;
-    position: relative;
-    left: 20px;
-  }
+.swiper__icon-prev {
+  width: 45px;
+  height: 12px;
+  position: relative;
+  left: 20px;
+}
 
-  .swiper__icon-next {
-    width: 45px;
-    height: 12px;
-    position: relative;
-    right: 20px;
-  }
+.swiper__icon-next {
+  width: 45px;
+  height: 12px;
+  position: relative;
+  right: 20px;
 }
 
 .swiper-container {
