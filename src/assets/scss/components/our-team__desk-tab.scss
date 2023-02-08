@@ -1,0 +1,129 @@
+.swiper-wrapper__section {
+  display: none;
+
+  @include mq(tablet) {
+    display: block;
+    height: 306px;
+  }
+
+  @include mq(desktop) {
+    height: 394px;
+  }
+
+.swiper {
+  width: 508px;
+  height: 306px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  @include mq(desktop) {
+    width: 1030px;
+    height: 394px;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+  }
+
+  .swiper-slide {
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include mq(desktop) {
+      width: 320px;
+    }
+  }
+
+  .swiper__text-wrapper {
+    width: 240px;
+    margin-top: 12px;
+
+    @include mq(desktop) {
+      width: 320px;
+    }
+  }
+
+  .swiper__text {
+    font-size: 16px;
+    color: var(--secondary-black-txt-cl);
+    line-height: calc(26 / 16);
+
+    @include mq(desktop) {
+        font-size: 18px;
+        line-height: calc(30 / 18);
+      }
+  }
+
+  .swiper__text-title {
+    font-size: 20px;
+    color: var(--secondary-black-txt-cl);
+    line-height: calc(26 / 16);
+
+    @include mq(desktop) {
+      font-size: 24px;
+      line-height: calc(32 / 24);
+    }
+  }
+
+  .swiper__list-img {
+    object-fit: cover;
+    width: 240px;
+    height: 240px;
+
+    @include mq(desktop) {
+      width: 320px;
+      height: 320px;
+    }
+  }
+}
+
+.swiper-button-prev {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  bottom: 180px;
+
+  @include mq(desktop) {
+    bottom: 256px;
+  }
+}
+
+.swiper-button-next {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  bottom: 224px;
+  left: 640px;
+
+  @include mq(desktop) {
+    left: 1195px;
+    bottom: 300px;
+  }
+}
+
+.swiper__btn {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.swiper__icon-prev {
+  width: 45px;
+  height: 12px;
+  position: relative;
+  left: 20px;
+}
+
+.swiper__icon-next {
+  width: 45px;
+  height: 12px;
+  position: relative;
+  right: 20px;
+}
+
+}
