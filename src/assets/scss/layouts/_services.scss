@@ -5,7 +5,7 @@
   }
 }
 
-.item {
+.services__item {
   position: relative;
 
   width: 100%;
@@ -14,7 +14,7 @@
 
   @include mq(tablet) {
     display: flex;
-    align-items: center;
+    align-items: center;   
 
     padding: 0px 0px;
   }
@@ -55,25 +55,27 @@
 
   opacity: 0.06;
 
+  @include mq(mobile-only) {
+    margin-bottom: 4px;
+  }
+
   @include mq(tablet) {
-    width: 92px;
+    width: 105px;
 
     font-size: 92px;
     line-height: 1;
     opacity: 0.2;
     text-align: left;
 
-    margin-right: 65px;
+    margin-right: 72px;
   }
 
   @include mq(desktop) {
-    width: 155px;
+    width: 146px;
 
     font-size: 128px;
-    opacity: 0.2;
-    text-align: left;
 
-    margin-right: 55px;
+    margin-right: 64px;
   }
 }
 
@@ -123,10 +125,8 @@
 
   color: var(--secondary-black-txt-cl);
 
-  padding-top: 4px;
-
   @include mq(tablet) {
-    width: 320px;
+    width: 300px;
 
     text-align: left;
   }

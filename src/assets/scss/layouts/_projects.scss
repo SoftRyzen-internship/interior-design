@@ -21,6 +21,24 @@
     width: 505px;
   }
 
+  &:nth-child(2) {
+    @include mq(desktop) {
+      order: 1;
+    }
+  }
+
+  &:nth-child(3) {
+    @include mq(desktop) {
+      order: 2;
+    }
+  }
+
+  &:nth-child(4) {
+    @include mq(desktop) {
+      order: 3;
+    }
+  }
+
   &:not(:last-child) {
     margin-bottom: 32px;
 
@@ -74,22 +92,37 @@
   }
 }
 
-.link {
-  display: flex;
+.projects__button {
+  display: inline-flex;
   align-items: center;
+  gap: 20px;
+
+  padding-left: 11px;
+  border: 1px solid transparent;
+  border-radius: 100px;
+
+  transition: border var(--slow);
+
+  @include mq(tablet) {
+    gap: 12px;
+  }
+
+  &:hover {
+    border: 1px solid var(--secondary-black-txt-cl);
+
+    .projects__buttonIcon {
+      border: 1px solid transparent;
+    }
+  }
 }
 
-.link__text {
+.projects__buttonText {
   font-size: 16px;
   line-height: 1.62;
-
-  margin-right: 20px;
 
   @include mq(tablet) {
     font-size: 18px;
     line-height: 1.44;
-
-    margin-right: 12px;
   }
 
   @include mq(desktop) {
@@ -98,11 +131,17 @@
   }
 }
 
-.link__icon {
+.projects__buttonIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
   width: 48px;
   height: 48px;
   border-radius: 50%;
   border: 1px solid var(--black-txt-cl);
+
+  transition: border var(--slow);
 
   @include mq(tablet) {
     width: 55px;
@@ -129,8 +168,9 @@
   left: 50%;
   transform: translateX(-50%);
 
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(5, 20px);
+  gap: 18px;
 
   @include mq(tablet) {
     bottom: 32px;
@@ -154,23 +194,22 @@
   border-radius: 50%;
   border: none;
 
-  margin-right: 8px;
-}
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-.slick-dots button::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  content: '';
-  width: 4px;
-  height: 4px;
-  text-indent: -999em;
-  border-radius: 50%;
-  background-color: #fff;
+    display: block;
+    content: '';
+    width: 4px;
+    height: 4px;
+    text-indent: -999em;
+    border-radius: 50%;
+    background-color: var(--white-txt-cl);
+  }
 }
 
 .slick-dots li.slick-active button {
-  border: 1px solid #fff;
+  border: 1px solid var(--white-txt-cl);
 }

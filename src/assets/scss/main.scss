@@ -8,10 +8,20 @@
 @import './base/container';
 @import './base/section';
 
+
+@import './layouts/header';
+@import './layouts/footer';
+@import './layouts/feedback';
+
 // @import './components/buttons';
 @import './components/nav-menu';
 @import './components/hero';
+@import './layouts/about';
 @import './components/form';
+@import './components/hero';
+@import './components/our-team__mobile';
+@import './components/our-team__desk-tab';
+
 // @import './components/mobile-menu';
 // @import './components/menu';
 // @import './components/modal';
@@ -19,9 +29,10 @@
 @import './layouts/services';
 @import './layouts/footer';
 
-// @import './components/hero';
-@import './layouts/feedback';
-// @import './layouts/footer';
-@import './components/hero';
+// 
+
+// 
+
+
 
 @import './layouts/header';
