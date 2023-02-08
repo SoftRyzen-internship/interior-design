@@ -106,6 +106,19 @@ button {
 
 .headline {
   position: relative;
+  margin-bottom: 52px;
+
+  @include mq(tablet) {
+    margin-bottom: 68px;
+  }
+
+  @include mq(desktop) {
+    margin-bottom: 96px;
+  }
+
+  .slider {
+    position: relative;
+  }
   &:after {
     content: '';
     position: absolute;
