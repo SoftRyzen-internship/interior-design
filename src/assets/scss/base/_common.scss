@@ -100,34 +100,34 @@ button {
 
 .headline {
   position: relative;
+  padding-left: 20px;
   margin-bottom: 52px;
-
   @include mq(tablet) {
+    padding-left: 40px;
     margin-bottom: 68px;
   }
-
   @include mq(desktop) {
+    padding-left: 100px;
     margin-bottom: 96px;
-  }
-
-  .slider {
-    position: relative;
   }
   &:after {
     content: '';
     position: absolute;
     top: 20px;
     left: 89px;
-    width: 200%;
+    width: calc(100% - 89px);
     height: 1px;
     background-color: var(--line-color);
     @include mq(tablet) {
+      padding-left: 40px;
       top: 30px;
       left: 177px;
+      width: calc(100% - 177px);
     }
     @include mq(desktop) {
       top: 40px;
       left: 210px;
+      width: calc(100% - 210px);
     }
   }
 }
@@ -177,4 +177,8 @@ button {
     width: 100px;
     height: 30px;
   }
+}
+
+.slider {
+  position: relative;
 }
