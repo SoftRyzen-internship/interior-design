@@ -1,15 +1,24 @@
-.swiper {
-  width: 508px;
-  margin: 0 auto;
+.swiper-wrapper__section {
   display: none;
-  overflow: hidden;
 
   @include mq(tablet) {
     display: block;
+    height: 306px;
   }
+
   @include mq(desktop) {
-    display: block;
+    height: 394px;
+  }
+
+.swiper {
+  width: 508px;
+  height: 306px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  @include mq(desktop) {
     width: 1030px;
+    height: 394px;
   }
 
   .swiper-wrapper {
@@ -117,6 +126,4 @@
   right: 20px;
 }
 
-.swiper-container {
-  overflow: hidden;
 }
