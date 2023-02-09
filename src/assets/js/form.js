@@ -1,62 +1,60 @@
-const form = document.querySelector('form');
+const form = document.querySelector('.form');
 
+const nameField = document.getElementById('name');
+const phoneField = document.getElementById('phone');
+const messageField = document.getElementById('message');
+
+const errorMessage = document.querySelectorAll('.form__error');
+
+const button = document.querySelector('.form__button');
+
+form.addEventListener('input', onInputChange);
 form.addEventListener('submit', onHandleSubmit);
+phoneField.addEventListener('blur', onInputChange);
+button.addEventListener('click', onButtonClick);
 
-function onHandleSubmit(event) {
-  event.preventDefault();
-
-  const {
-    elements: { name, phone, message },
-  } = event.currentTarget;
-
-  const result = { name: name.value, phone: phone.value, message: message.value };
-  event.currentTarget.reset();
+function onInputChange({ target }) {
+  if (target.hasAttribute('data-reg')) {
+    inputCheck(target);
+  }
 }
 
-const mask = selector => {
-  let setCursorPosition = (pos, elem) => {
-    elem.focus();
+function inputCheck(el) {
+  let isValid = true;
+  const inputValue = el.value.trim();
 
-    if (elem.setSelectionRange) {
-      elem.setSelectionRange(pos, pos);
-    } else if (elem.createTextRange) {
-      let range = elem.createTextRange();
+  const inputReg = el.getAttribute('data-reg');
+  const reg = new RegExp(inputReg);
 
-      range.collapse = true;
-      range.moveEnd('character', pos);
-      range.moveStart('character', pos);
-      range.select();
-    }
-  };
-
-  function createMask(event) {
-    let matrix = '+38 (___) ___ __ __ ',
-      i = 0,
-      def = matrix.replace(/\D/g, ''),
-      val = this.value.replace(/\D/g, '');
-
-    if (def.length >= val.length) {
-      val = def;
-    }
-
-    this.value = matrix.replace(/./g, a => {
-      return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? '' : a;
-    });
-
-    if (event.type === 'blur') {
-      if (this.value.length == 2) {
-        this.value = '';
-      }
-    } else {
-      setCursorPosition(this.value.length, this);
-    }
+  if (reg.test(inputValue)) {
+    setSuccess(el);
+  } else {
+    setError(el);
+    isValid = false;
   }
+  return isValid;
+}
 
-  let input = document.querySelector(selector);
+function onHandleSubmit(e) {
+  e.preventDefault();
+  let isNameValid = inputCheck(nameField);
+  let isPhoneValid = inputCheck(phoneField);
+  let isFormValid = isNameValid && isPhoneValid;
+  if (isFormValid) {
+    e.currentTarget.reset();
+  }
+}
 
-  input.addEventListener('input', createMask);
-  input.addEventListener('blur', createMask);
-  input.addEventListener('focus', createMask);
-};
+function setError(field) {
+  field.classList.add('error__input');
+  field.classList.remove('success__input');
+}
 
-mask('[name="phone"]');
+function setSuccess(field) {
+  field.classList.add('success__input');
+  field.classList.remove('error__input');
+}
+
+function onButtonClick(event) {
+  event.preventDefault();
+}
