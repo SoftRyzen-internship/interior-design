@@ -12,6 +12,7 @@
     position: relative;
     min-width: 280px;
     margin-bottom: 40px;
+
     @include mq(tablet) {
       margin-bottom: 60px;
       min-width: 334px;
@@ -29,28 +30,44 @@
 
   &__input {
     width: 100%;
-    padding: 8px 0;
+    padding: 4px 0;
     color: var(--secondary-black-txt-cl);
     border: none;
     border-bottom: 1px solid var(--line-form-color);
     outline: none;
     background: transparent;
+    font-size: 18px;
+    line-height: calc(30 / 18);
+    @include mq(tablet) {
+      padding: 8px 0;
+    }
   }
 
   &__input:focus ~ .form__label,
   &__input:not(:placeholder-shown) ~ .form__label {
-    top: -20px;
+    top: -18px;
     left: 0;
     color: var(--line-color);
-    font-size: 12px;
+    font-size: 14px;
+    @include mq(tablet) {
+      font-size: 16px;
+    }
   }
 
-  &__input:valid ~ .form__label {
-    color: rgba(7, 118, 7);
+  // &__input:invalid ~ .form__label {
+  //   color: #d41919;
+  // }
+
+  // &__input:invalid {
+  //   border-bottom: 1px solid #d41919;
+  // }
+
+  &__input:focus {
+    border-bottom: 1px solid var(--line-form-color);
   }
 
-  &__input:invalid ~ .form__label {
-    color: rgb(212, 50, 9);
+  &__input:not(:focus):invalid {
+    border-bottom: 1px solid var(--line-form-color);
   }
 
   &__input:not(:focus):invalid ~ label {
@@ -64,7 +81,11 @@
     color: var(--secondary-black-txt-cl);
     pointer-events: none;
     transition: var(--slow);
-    background-color: white;
+    background: transparent;
+    @include mq(tablet) {
+      top: 9px;
+      font-size: 18px;
+    }
   }
 
   &__box {
@@ -125,4 +146,28 @@
       padding-right: 27px;
     }
   }
+  &__error {
+    font-size: 12px;
+    position: absolute;
+    bottom: -22px;
+    left: 0;
+    color: #d41919;
+    visibility: hidden;
+    @include mq(tablet) {
+      font-size: 14px;
+      bottom: -28px;
+    }
+  }
+}
+
+.form__input.error__input {
+  border-bottom: 1px solid #d41919;
+}
+
+.form__input.success__input {
+  border-bottom: 1px solid var(--line-form-color);
+}
+
+.form__input.error__input ~ .form__error {
+  visibility: visible;
 }
