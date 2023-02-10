@@ -163,3 +163,30 @@
     height: 32px;
   }
 }
+
+.logo-footer__link {
+  margin-top: 65px;
+  display: flex;
+  justify-content: center;
+
+  @include mq(tablet) {
+    margin-top: 25px;
+  }
+  @include mq(desktop) {
+    margin-top: 47px;
+  }
+}
+
+.logo-footer__icon {
+  width: 74px;
+  height: 9px;
+
+  @include mq(tablet) {
+    width: 88px;
+    height: 11px;
+  }
+  @include mq(desktop) {
+    width: 104px;
+    height: 13px;
+  }
+}
