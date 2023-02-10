@@ -108,20 +108,20 @@ button {
     content: '';
     position: absolute;
     top: 20px;
-    left: 89px;
-    width: calc(100% - 89px);
+    left: 109px;
+    width: calc(100% - 109px);
     height: 1px;
     background-color: var(--line-color);
     @include mq(tablet) {
       padding-left: 40px;
       top: 30px;
-      left: 177px;
-      width: calc(100% - 177px);
+      left: 217px;
+      width: calc(100% - 217px);
     }
     @include mq(desktop) {
       top: 40px;
-      left: 210px;
-      width: calc(100% - 210px);
+      left: 310px;
+      width: calc(100% - 310px);
     }
   }
 }
@@ -148,18 +148,18 @@ button {
 }
 .subtitle {
   position: absolute;
-  left: 89px;
+  left: 109px;
   bottom: -12px;
   font-size: 14px;
   line-height: calc(24 / 14);
   @include mq(tablet) {
-    left: 177px;
+    left: 217px;
     bottom: -14px;
     font-size: 18px;
     line-height: calc(26 / 18);
   }
   @include mq(desktop) {
-    left: 210px;
+    left: 310px;
     bottom: -16px;
     font-size: 24px;
     line-height: calc(32 / 24);
