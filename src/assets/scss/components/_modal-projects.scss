@@ -5,6 +5,7 @@
   transform: translate(-50%, -50%);
 
   display: none;
+  max-height: 98%;
   width: 90%;
   background-color: #fff;
   padding-top: 24px;
@@ -12,14 +13,7 @@
   padding-left: 16px;
   padding-right: 16px;
 
-  @include mq(mobile-only) {
-    max-height: 90%;
-    overflow: auto;
-  }
-
-  @include mq(tablet-only) {
-    overflow: auto;
-  }
+  overflow: auto;
 
   @include mq(tablet) {
     width: 680px;
@@ -32,8 +26,9 @@
   @include mq(desktop) {
     width: 1280px;
     max-height: 98%;
-    padding-top: calc((98vh - 712px) / 2);
-    padding-bottom: calc((98vh - 712px) / 2);
+    overflow: hidden;
+    padding-top: calc(20px + (98vh - 712px) / 2);
+    padding-bottom: calc(20px + (98vh - 712px) / 2);
     padding-left: 80px;
     padding-right: 80px;
   }
@@ -102,10 +97,11 @@
 
 .sliderModal__img {
   display: flex;
-  align-items: center;
   justify-content: center;
+  object-fit: contain;
 
   width: 680px;
+  max-height: 53vh;
 
   margin-left: auto;
   margin-right: auto;
@@ -113,7 +109,12 @@
 
   @include mq(desktop) {
     width: 1120px;
+    max-height: 60vh;
   }
+}
+
+.sliderModal__img img{
+  object-fit: cover;
 }
 
 .sliderModal__text {
@@ -140,7 +141,7 @@
   z-index: 400;
 
   @include mq(tablet-only) {
-    bottom: -70px;
+    bottom: -60px;
   }
 
   @include mq(desktop) {
