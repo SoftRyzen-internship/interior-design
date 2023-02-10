@@ -42,8 +42,12 @@
   &:not(:last-child) {
     margin-bottom: 32px;
 
-    @include mq(tablet-only) {
+    @include mq(tablet) {
       margin-bottom: 48px;
+    }
+
+    @include mq(desktop) {
+      margin-bottom: 0px;
     }
   }
 }

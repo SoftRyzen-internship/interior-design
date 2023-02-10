@@ -1,44 +1,50 @@
-/* import $ from 'jquery';
+(() => {
+  const btn = document.querySelectorAll('.projects__button');
+  const backdrop = document.querySelector('.backdrop');  
 
-$(document).ready(function() {
-  const openModalBtn = document.querySelectorAll('.btn-modal');
-  const modal = document.querySelector('[data-modal]');
-  const closeModalBtn = document.querySelector('[data-modal-close]');
-  const body = document.querySelector('body');
-  const backdrop = document.querySelector('.backdrop');
-
-  openModalBtn.forEach(function(btn) {
-    btn.addEventListener('click', e => {
-      e.preventDefault();
-      setTimeout(() => {
-        toggleModal();
-      }, 500);
-    });
-  });
-
-  function toggleModal() {
-    modal.classList.toggle('is-hidden');
-    body.classList.toggle('scroll-hidden');
+  function openModalProjects(event) {
+    const modalProjects = backdrop.querySelector(".modal-projects");
+    const projectActive = backdrop.querySelector(`[data-number="${event.currentTarget.dataset.number}"]`);
+    const btnClose = projectActive.querySelector(".modal-projects__close");
+    projectActive.classList.add('open-modal');
+    modalProjects.classList.add('open-modal');
+    btnClose.addEventListener("click", closeModal);
+    openModal();
   }
 
-  function handleKey(e) {
-    if (!modal.classList.contains('is-hidden')) {
-      if (e.key === 'Escape') {
-        toggleModal();
-      }
-    }
-    return;
+  // function openModalFeedback() {
+  //   const modalFeedback = backdrop.querySelector(".modal-feedback");
+  //   const btnClose = modalFeedback.querySelector(".modal-feedback__close");
+  //   modalFeedback.classList.add('is-active');
+  //   btnClose.addEventListener("click", closeModal);
+  //   openModal();
+  // }
+
+  function openModal() {
+    backdrop.classList.remove('is-hidden');
+    document.body.classList.add("scroll-hidden");
+    document.addEventListener('keydown', closeModalEsc);
+    backdrop.addEventListener('click', closeModalBackdrop);
   }
 
-  function handleClose(e) {
-    if (e.target === e.currentTarget) {
-      toggleModal();
-    }
-    return;
+  function closeModal() {
+    const activeEl = backdrop.querySelectorAll(".open-modal");
+    Array.from(activeEl).map(item => item.classList.remove('open-modal'));
+    backdrop.classList.add('is-hidden');
+    document.body.classList.remove("scroll-hidden");
+    document.removeEventListener('keydown', closeModalEsc);
+    backdrop.removeEventListener('click', closeModalBackdrop);
   }
 
-  document.addEventListener('keydown', handleKey);
-  backdrop.addEventListener('mousedown', handleClose);
-  closeModalBtn.addEventListener('click', toggleModal);
-});
- */
+  function closeModalBackdrop(event) {
+    if (event.target !== event.currentTarget) return;
+    closeModal();
+  }
+
+  function closeModalEsc(event) {
+    if (event.code !== "Escape") return;
+    closeModal();
+  }
+
+  Array.from(btn).forEach(item => item.addEventListener('click', openModalProjects));
+})();
