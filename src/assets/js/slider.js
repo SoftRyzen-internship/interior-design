@@ -6,7 +6,7 @@ $('.slider').slick({
 });
 
 $('.sliderModal').slick({
-  arrows: false,
+  arrows: true,
   speed: 1000,
   cssEase: 'ease-in-out',
   variableWidth: true,
