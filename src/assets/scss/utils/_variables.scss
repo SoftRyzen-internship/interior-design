@@ -33,6 +33,6 @@
   --grid-mr-top: 30px;
 
   /* ANIMATIONS SPEED */
-  --fast: 0.2s;
-  --slow: 0.4s;
+  --animation-speed: 0.3s;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
