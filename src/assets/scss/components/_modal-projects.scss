@@ -88,8 +88,6 @@
 }
 
 .sliderModal {
-  position: relative;
-
   @include mq(mobile-only) {
     display: none;
   }
@@ -141,18 +139,19 @@
   z-index: 400;
 
   @include mq(tablet-only) {
-    bottom: -60px;
+    bottom: 40px;
   }
 
   @include mq(desktop) {
-    top: 288px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   &.slick-next {
     right: 40px;
 
     @include mq(desktop) {
-      right: 0;
+      right: 80px;
     }
   }
 
@@ -160,7 +159,7 @@
     left: 40px;
 
     @include mq(desktop) {
-      left: 0;
+      left: 80px;
     }
   }
 
