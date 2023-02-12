@@ -1,6 +1,5 @@
 .modal-feedback {
-  display: block;
-  // display: none;
+  display: none;
   padding: 20px;
   min-height: 303px;
   max-height: 100vh;
@@ -26,7 +25,6 @@
 
   &__wrapper {
     position: relative;
-    // display: none;
     display: block;
     background-color: var(--white-bg);
     width: 100%;
@@ -37,10 +35,6 @@
     @include mq(desktop) {
       display: flex;
       height: calc(100vh - 96px);
-    }
-
-    &.open-modal {
-      display: block;
     }
   }
 
