@@ -1,22 +1,18 @@
 .modal-feedback {
   display: none;
-  padding: 20px;
-  min-height: 303px;
-  max-height: 100vh;
-  min-width: 280px;
-  max-width: 375px;
-  width: 100%;
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
+  min-height: 303px;
+  max-height: calc(100vh - 96px);
+  max-width: 375px;
+  width: 90%;
   transform: translate(-50%, -50%);
   @include mq(tablet) {
-    max-width: 768px;
-    padding: 60px 44px;
+    max-width: 680px;
   }
   @include mq(desktop) {
-    max-width: 1440px;
-    padding: 48px 80px;
+    max-width: 1280px;
   }
 
   &.open-modal {
@@ -65,7 +61,7 @@
       align-items: flex-end;
       flex-direction: column;
       justify-content: center;
-      flex: 1 1 50%;
+      flex: 0 0 50%;
       padding-left: 80px;
       padding-right: 80px;
     }
@@ -154,6 +150,9 @@
   &__img {
     display: none;
     @include mq(tablet) {
+      // background-image: url('');
+      background-repeat: no-repeat;
+      background-size: cover;
       overflow: hidden;
       display: block;
       width: 680px;
