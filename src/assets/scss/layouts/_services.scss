@@ -114,6 +114,7 @@
   &--position {
     @include mq(mobile-only) {
       top: 12px;
+      max-width: 181px;
     }
   }
 }

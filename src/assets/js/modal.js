@@ -9,6 +9,7 @@
     projectActive.classList.add('open-modal');
     modalProjects.classList.add('open-modal');
     btnClose.addEventListener("click", closeModal);
+    $('.sliderModal').slick('setPosition');
     openModal();
   }
 
