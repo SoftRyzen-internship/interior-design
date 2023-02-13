@@ -219,7 +219,7 @@
 
 .slick-next:hover::after {
   animation-name: animationModalLeft;
-  animation-duration: 1s;
+  animation-duration: var(--animation-speed-slow);
   animation-iteration-count: 1;
   animation-timing-function: var(--transition-timing-function);
 }
@@ -245,7 +245,7 @@
 
 .slick-prev:hover::after {
   animation-name: animationModalRight;
-  animation-duration: 1s;
+  animation-duration: var(--animation-speed-slow);
   animation-iteration-count: 1;
   animation-timing-function: var(--transition-timing-function);
 }

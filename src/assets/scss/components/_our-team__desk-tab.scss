@@ -144,7 +144,7 @@
 
 .swiper__btn:hover .swiper__icon-prev{
     animation-name: animationLeft;
-    animation-duration: --animation-speed-slow;
+    animation-duration: var(--animation-speed-slow);
     animation-iteration-count:1;
     animation-timing-function: var(--transition-timing-function);
 }
@@ -158,7 +158,7 @@
 
 .swiper__btn:hover .swiper__icon-next{
     animation-name: animationRight;
-    animation-duration:1s;
+    animation-duration: var(--animation-speed-slow);
     animation-iteration-count:1;
     animation-timing-function: var(--transition-timing-function);
 }
