@@ -8,29 +8,20 @@
   max-height: 98%;
   width: 90%;
   background-color: #fff;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 24px 16px 24px;
 
   overflow: auto;
 
   @include mq(tablet) {
     width: 680px;
-    padding-top: 40px;
-    padding-bottom: 109px;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding: 40px 0px 109px;
   }
 
   @include mq(desktop) {
     width: 1280px;
     max-height: 98%;
     overflow: hidden;
-    padding-top: calc(20px + (98vh - 712px) / 2);
-    padding-bottom: calc(20px + (98vh - 712px) / 2);
-    padding-left: 80px;
-    padding-right: 80px;
+    padding: 60px 80px 60px;
   }
 
   &.open-modal {
@@ -57,12 +48,17 @@
   justify-content: center;
   border-radius: 50%;
   border: 1px solid var(--black-txt-cl);
+  transition: transform var(--transition-timing-function) var(--animation-speed);
 
   @include mq(tablet) {
     top: 40px;
     right: 40px;
     width: 32px;
     height: 32px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
   }
 }
 
@@ -91,12 +87,15 @@
   @include mq(mobile-only) {
     display: none;
   }
+
+  @include mq(tablet-only) {
+    position: relative;
+  }
 }
 
 .sliderModal__img {
   display: flex;
   justify-content: center;
-  object-fit: contain;
 
   width: 680px;
   max-height: 53vh;
@@ -111,7 +110,7 @@
   }
 }
 
-.sliderModal__img img{
+.sliderModal__img img {
   object-fit: cover;
 }
 
@@ -131,20 +130,31 @@
 
 .slick-arrow {
   position: absolute;
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   font-size: 0;
   border-radius: 50%;
   border: 1px solid var(--black-txt-cl);
   z-index: 400;
+  transition: transform var(--transition-timing-function) var(--animation-speed);
 
   @include mq(tablet-only) {
-    bottom: 40px;
+    bottom: -25px;
+    transform: translateY(100%);
   }
 
   @include mq(desktop) {
     top: 50%;
     transform: translateY(-50%);
+  }
+
+  &:hover {
+    @include mq(tablet) {
+      transform: translateY(100%) scale(1.1);
+    }
+    @include mq(desktop) {
+      transform: translateY(-50%) scale(1.1);
+    }
   }
 
   &.slick-next {
@@ -165,8 +175,8 @@
 
   &::after {
     display: block;
-    width: 45px;
-    height: 45px;
+    width: 46px;
+    height: 15px;
     content: '';
     border: none;
     position: absolute;
@@ -178,9 +188,7 @@
   }
 
   &.slick-next::after {
-    top: 50%;
     left: 0;
-
     background-image: url('../images/slider-next.svg');
   }
 
@@ -188,6 +196,58 @@
     left: 100%;
     background-image: url('../images/slider-prev.svg');
   }
+}
+
+@keyframes animationModalLeft {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  25% {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
+  26% {
+    opacity: 0;
+    transform: translate(-100%, -50%);
+  }
+  55% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.slick-next:hover::after {
+  animation-name: animationModalLeft;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: var(--transition-timing-function);
+}
+
+@keyframes animationModalRight {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  25% {
+    opacity: 1;
+    transform: translate(-100%, -50%);
+  }
+  26% {
+    opacity: 0;
+    transform: translate(0, -50%);
+  }
+  55% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.slick-prev:hover::after {
+  animation-name: animationModalRight;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: var(--transition-timing-function);
 }
 
 .modal-projects__list {
