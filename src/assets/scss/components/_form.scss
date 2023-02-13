@@ -80,7 +80,9 @@
     left: 0;
     color: var(--secondary-black-txt-cl);
     pointer-events: none;
-    transition: var(--slow);
+    transition: top var(--transition-timing-function) var(--animation-speed),
+      color var(--transition-timing-function) var(--animation-speed),
+      font-size var(--transition-timing-function) var(--animation-speed);
     background: transparent;
     @include mq(tablet) {
       top: 9px;
@@ -90,10 +92,6 @@
 
   &__box {
     text-align: center;
-    @include mq(tablet) {
-    }
-    @include mq(desktop) {
-    }
   }
 
   &__button {
@@ -104,7 +102,7 @@
     align-items: center;
     gap: 20px;
     line-height: calc(26 / 16);
-    transition: border var(--slow);
+    transition: border var(--transition-timing-function) var(--animation-speed);
     @include mq(tablet) {
       padding-left: 16px;
       gap: 54px;
@@ -132,7 +130,7 @@
     padding-right: 12px;
     border: 1px solid var(--secondary-black-txt-cl);
     border-radius: 50%;
-    transition: border var(--slow);
+    transition: border var(--transition-timing-function) var(--animation-speed);
     @include mq(tablet) {
       width: 76px;
       height: 76px;
