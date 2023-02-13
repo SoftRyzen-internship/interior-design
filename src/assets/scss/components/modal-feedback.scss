@@ -1,5 +1,4 @@
 .modal-feedback {
-  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -7,7 +6,9 @@
   max-height: calc(100vh - 96px);
   max-width: 375px;
   width: 90%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 50%) scale(0);
+  transition: transform var(--animation-speed) var(--transition-timing-function);
+
   @include mq(tablet) {
     max-width: 680px;
   }
@@ -16,8 +17,8 @@
   }
 
   &.open-modal {
-    display: block;
     height: auto;
+    transform: translate(-50%, -50%) scale(1);
   }
 
   &__wrapper {
@@ -49,6 +50,13 @@
       @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
         background-image: url('../images/form/abstract-desk@2x.jpg');
       }
+    }
+  }
+
+  .modal__close.modal-feedback__close {
+    right: 16px;
+    @include mq(tablet) {
+      right: 40px;
     }
   }
 

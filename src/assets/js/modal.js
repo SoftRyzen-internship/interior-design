@@ -6,7 +6,7 @@ function openModalProjects(event) {
   const projectActive = backdrop.querySelector(
     `[data-number="${event.currentTarget.dataset.number}"]`,
   );
-  const btnClose = projectActive.querySelector('.modal-projects__close');
+  const btnClose = projectActive.querySelector('.modal__close');
   projectActive.classList.add('open-modal');
   modalProjects.classList.add('open-modal');
   btnClose.addEventListener('click', closeModal);
@@ -16,7 +16,7 @@ function openModalProjects(event) {
 
 export function openModalFeedback() {
   const modalFeedback = backdrop.querySelector('.modal-feedback');
-  const btnClose = modalFeedback.querySelector('.modal-projects__close');
+  const btnClose = modalFeedback.querySelector('.modal__close');
   const btnCloseBig = document.querySelector('.modal-feedback__button');
   modalFeedback.classList.add('open-modal');
   btnClose.addEventListener('click', closeModal);
