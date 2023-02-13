@@ -105,7 +105,7 @@
   border: 1px solid transparent;
   border-radius: 100px;
 
-  transition: border var(--transition-timing-function) var(--animation-speed);
+  transition: border  var(--animation-speed) var(--transition-timing-function);
 
   @include mq(tablet) {
     gap: 12px;
@@ -145,7 +145,7 @@
   border-radius: 50%;
   border: 1px solid var(--black-txt-cl);
 
-  transition: border var(--transition-timing-function) var(--animation-speed);
+  transition: border  var(--animation-speed) var(--transition-timing-function);
 
   @include mq(tablet) {
     width: 55px;
