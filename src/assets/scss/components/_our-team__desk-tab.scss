@@ -137,28 +137,28 @@
 
 @keyframes animationLeft {
   0% {opacity: 1; transform: translateX(0px) scale(1);}
-  25%{opacity: 1; transform:translateX(-22px) scale(0.9);}
-  26%{opacity: 0; transform:translateX(22px) scale(0.9);}
+  25%{opacity: 1; transform:translateX(-22px) scale(1);}
+  26%{opacity: 0; transform:translateX(22px) scale(1);}
   55% {opacity: 1; transform: translateX(0px) scale(1);}
 }
 
 .swiper__btn:hover .swiper__icon-prev{
     animation-name: animationLeft;
-    animation-duration:1.4s;
+    animation-duration: --animation-speed-slow;
     animation-iteration-count:1;
     animation-timing-function: var(--transition-timing-function);
 }
 
 @keyframes animationRight {
   0% {opacity: 1; transform: translateX(0px) scale(1);}
-  25%{opacity: 1; transform:translateX(22px) scale(0.9);}
-  26%{opacity: 0; transform:translateX(-22px) scale(0.9);}
+  25%{opacity: 1; transform:translateX(19px) scale(1);}
+  26%{opacity: 0; transform:translateX(-19px) scale(1);}
   55% {opacity: 1; transform: translateX(0px) scale(1);}
 }
 
 .swiper__btn:hover .swiper__icon-next{
     animation-name: animationRight;
-    animation-duration:1.4s;
+    animation-duration:1s;
     animation-iteration-count:1;
     animation-timing-function: var(--transition-timing-function);
 }
