@@ -2,14 +2,12 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-
-  display: none;
+  transform: translate(-50%, 50%) scale(0);
+  transition: transform var(--animation-speed) var(--transition-timing-function);
   max-height: 98%;
   width: 90%;
   background-color: #fff;
   padding: 24px 16px 24px;
-
   overflow: auto;
 
   @include mq(tablet) {
@@ -25,7 +23,7 @@
   }
 
   &.open-modal {
-    display: block;
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 
@@ -34,31 +32,6 @@
 
   &.open-modal {
     display: block;
-  }
-}
-
-.modal-projects__close {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  top: 16px;
-  right: 26px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 1px solid var(--black-txt-cl);
-  transition: transform var(--transition-timing-function) var(--animation-speed);
-
-  @include mq(tablet) {
-    top: 40px;
-    right: 40px;
-    width: 32px;
-    height: 32px;
-  }
-
-  &:hover {
-    transform: scale(1.1);
   }
 }
 

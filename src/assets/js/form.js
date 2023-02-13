@@ -1,17 +1,13 @@
+import { openModalFeedback } from './modal';
+
 const form = document.querySelector('.form');
 
 const nameField = document.getElementById('name');
 const phoneField = document.getElementById('phone');
-const messageField = document.getElementById('message');
-
-const errorMessage = document.querySelectorAll('.form__error');
-
-const button = document.querySelector('.form__button');
 
 form.addEventListener('input', onInputChange);
 form.addEventListener('submit', onHandleSubmit);
 phoneField.addEventListener('blur', onInputChange);
-button.addEventListener('click', onButtonClick);
 
 function onInputChange({ target }) {
   if (target.hasAttribute('data-reg')) {
@@ -41,6 +37,7 @@ function onHandleSubmit(e) {
   let isPhoneValid = inputCheck(phoneField);
   let isFormValid = isNameValid && isPhoneValid;
   if (isFormValid) {
+    openModalFeedback();
     e.currentTarget.reset();
   }
 }
@@ -53,8 +50,4 @@ function setError(field) {
 function setSuccess(field) {
   field.classList.add('success__input');
   field.classList.remove('error__input');
-}
-
-function onButtonClick(event) {
-  event.preventDefault();
 }

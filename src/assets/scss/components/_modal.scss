@@ -16,3 +16,41 @@
     pointer-events: none;
   }
 }
+
+.modal__close {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 16px;
+  right: 26px;
+  border-radius: 50%;
+  border: 1px solid var(--black-txt-cl);
+  transition: transform var(--transition-timing-function) var(--animation-speed);
+
+  @include mq(tablet) {
+    top: 40px;
+    right: 40px;
+    width: 32px;
+    height: 32px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.close__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// .modal {
+//   transform: translate(-50%, 0) scale(1);
+//   transition: transform 0.3s linear 0.2s;
+
+//   .is-hidden & {
+//     transform: translate(-50%, 100%) scale(0);
+//   }
+// }
