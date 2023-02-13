@@ -35,9 +35,6 @@
       background-repeat: no-repeat;
       max-height: 904px;
       width: 680px;
-      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        background-image: url('../images/form/abstract-tab@2x.jpg');
-      }
     }
     @include mq(desktop) {
       background-image: url('../images/form/abstract-desk.jpg');
@@ -47,9 +44,6 @@
       justify-content: flex-start;
       background-position: right;
       max-height: 928px;
-      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        background-image: url('../images/form/abstract-desk@2x.jpg');
-      }
     }
   }
 
