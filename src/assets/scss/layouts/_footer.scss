@@ -104,7 +104,7 @@
   line-height: 1.71;
   color: var(--secondary-black-txt-cl);
 
-  transition: all 0.5s cubic-bezier(0.14, 0.56, 0.95, 0.62);
+  transition: all var(--transition-timing-function) var(--animation-speed);
   &:hover {
     color: var(--black-txt-cl);
   }
@@ -155,7 +155,7 @@
   transition: all var(--transition-timing-function) var(--animation-speed);
   &:hover {
     fill: var(--black-txt-cl);
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 
   @include mq(desktop) {
