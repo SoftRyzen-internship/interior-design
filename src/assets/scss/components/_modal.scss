@@ -1,5 +1,4 @@
 .backdrop {
-  visibility: visible;
   position: fixed;
   top: 0;
   left: 0;
@@ -11,7 +10,6 @@
   transition: opacity var(--animation-speed) var(--transition-timing-function);
 
   &.is-hidden {
-    visibility: hidden;
     opacity: 0;
     pointer-events: none;
   }
@@ -45,4 +43,3 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-

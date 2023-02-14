@@ -2,8 +2,10 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: transform var(--animation-speed) var(--transition-timing-function);
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0;
+  transition: transform var(--animation-speed) var(--transition-timing-function),
+    opacity var(--animation-speed) var(--transition-timing-function);
   max-height: 98%;
   width: 90%;
   background-color: #fff;
@@ -24,6 +26,7 @@
 
   &.open-modal {
     transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
   }
 }
 
@@ -109,7 +112,7 @@
   border-radius: 50%;
   border: 1px solid var(--black-txt-cl);
   z-index: 400;
-  transition: transform  var(--animation-speed) var(--transition-timing-function);
+  transition: transform var(--animation-speed) var(--transition-timing-function);
 
   @include mq(tablet-only) {
     bottom: -25px;
