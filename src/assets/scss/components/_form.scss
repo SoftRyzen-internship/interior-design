@@ -2,10 +2,11 @@
   @include mq(tablet) {
     display: flex;
     align-items: center;
-    gap: 50px;
+    justify-content: space-between;
   }
   @include mq(desktop) {
     gap: 210px;
+    justify-content: flex-start;
   }
 
   &__line {
@@ -15,7 +16,7 @@
 
     @include mq(tablet) {
       margin-bottom: 60px;
-      min-width: 334px;
+      min-width: 400px;
     }
     @include mq(desktop) {
       min-width: 400px;
@@ -53,14 +54,6 @@
       font-size: 16px;
     }
   }
-
-  // &__input:invalid ~ .form__label {
-  //   color: #d41919;
-  // }
-
-  // &__input:invalid {
-  //   border-bottom: 1px solid #d41919;
-  // }
 
   &__input:focus {
     border-bottom: 1px solid var(--line-form-color);
@@ -104,8 +97,8 @@
     line-height: calc(26 / 16);
     transition: border var(--transition-timing-function) var(--animation-speed);
     @include mq(tablet) {
-      padding-left: 16px;
-      gap: 54px;
+      padding-left: 12px;
+      gap: 32px;
       font-size: 18px;
       line-height: calc(26 / 18);
     }
@@ -145,6 +138,9 @@
     }
   }
   &__error {
+    @media (max-width: 374.98px) {
+      font-size: 10px;
+    }
     font-size: 12px;
     position: absolute;
     bottom: -22px;

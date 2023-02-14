@@ -8,7 +8,7 @@
   background-color: rgba(65, 65, 65, 0.6);
   z-index: 900;
   overflow: auto;
-  transition: opacity var(--slow);
+  transition: opacity var(--animation-speed) var(--transition-timing-function);
 
   &.is-hidden {
     visibility: hidden;
@@ -25,7 +25,7 @@
   right: 26px;
   border-radius: 50%;
   border: 1px solid var(--black-txt-cl);
-  transition: transform var(--transition-timing-function) var(--animation-speed);
+  transition: transform var(--animation-speed) var(--transition-timing-function);
 
   @include mq(tablet) {
     top: 40px;
@@ -46,11 +46,3 @@
   transform: translate(-50%, -50%);
 }
 
-// .modal {
-//   transform: translate(-50%, 0) scale(1);
-//   transition: transform 0.3s linear 0.2s;
-
-//   .is-hidden & {
-//     transform: translate(-50%, 100%) scale(0);
-//   }
-// }
