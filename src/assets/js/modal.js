@@ -3,6 +3,10 @@ const backdrop = document.querySelector('.backdrop');
 
 function openModalProjects(event) {
   const modalProjects = backdrop.querySelector('.modal-projects');
+  const prevActiveWrapper = modalProjects.querySelector('.open-modal');
+  if (prevActiveWrapper) {
+    prevActiveWrapper.classList.remove('open-modal');
+  }
   const projectActive = backdrop.querySelector(
     `[data-number="${event.currentTarget.dataset.number}"]`,
   );
@@ -32,8 +36,8 @@ function openModal() {
 }
 
 function closeModal() {
-  const activeEl = backdrop.querySelectorAll('.open-modal');
-  Array.from(activeEl).map(item => item.classList.remove('open-modal'));
+  const activeEl = backdrop.querySelector('.open-modal.modal-window');
+  activeEl.classList.remove('open-modal');
   backdrop.classList.add('is-hidden');
   document.documentElement.classList.remove('scroll-hidden');
   document.removeEventListener('keydown', closeModalEsc);
