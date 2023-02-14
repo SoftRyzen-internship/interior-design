@@ -104,7 +104,7 @@
   line-height: 1.71;
   color: var(--secondary-black-txt-cl);
 
-  transition: all 0.5s cubic-bezier(0.14, 0.56, 0.95, 0.62);
+  transition: all var(--transition-timing-function) var(--animation-speed);
   &:hover {
     color: var(--black-txt-cl);
   }
@@ -118,7 +118,7 @@
     left: 0;
     background-color: var(--black-txt-cl);
     transform-origin: bottom left;
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transition: all var(--transition-timing-function) var(--animation-speed);
 
     transform: scaleX(0);
   }
@@ -152,10 +152,10 @@
   width: 24px;
   height: 24px;
 
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: all var(--transition-timing-function) var(--animation-speed);
   &:hover {
     fill: var(--black-txt-cl);
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 
   @include mq(desktop) {
@@ -164,7 +164,7 @@
   }
 }
 
-.logo-footer__link {
+.logo-footer__box {
   margin-top: 65px;
   display: flex;
   justify-content: center;
