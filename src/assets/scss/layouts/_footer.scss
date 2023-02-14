@@ -118,7 +118,7 @@
     left: 0;
     background-color: var(--black-txt-cl);
     transform-origin: bottom left;
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transition: all var(--transition-timing-function) var(--animation-speed);
 
     transform: scaleX(0);
   }
@@ -152,7 +152,7 @@
   width: 24px;
   height: 24px;
 
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: all var(--transition-timing-function) var(--animation-speed);
   &:hover {
     fill: var(--black-txt-cl);
     transform: scale(1.2);
