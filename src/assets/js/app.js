@@ -34,7 +34,6 @@ function changeHeaderBackground() {
   header.style.backgroundColor = 'rgba(254, 254, 254, 1)';
 }
 
-console.log(window.innerWidth);
 
 headerMobileMenuLinks.forEach(link => link.addEventListener('click', showMobileMenu));
 mobileMenuBtn.addEventListener('click', showMobileMenu);
