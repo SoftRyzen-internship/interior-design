@@ -55,14 +55,6 @@
     }
   }
 
-  // &__input:invalid ~ .form__label {
-  //   color: #d41919;
-  // }
-
-  // &__input:invalid {
-  //   border-bottom: 1px solid #d41919;
-  // }
-
   &__input:focus {
     border-bottom: 1px solid var(--line-form-color);
   }
