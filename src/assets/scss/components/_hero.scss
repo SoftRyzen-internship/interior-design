@@ -1,8 +1,6 @@
 .hero {
-
   padding-top: 0;
   padding-bottom: 60px;
-
 
   @include mq(tablet-only) {
     padding-top: 248px;
@@ -13,7 +11,6 @@
     padding-top: 292px;
     padding-bottom: 393px;
   }
-
 }
 
 .hero__container {
@@ -39,8 +36,7 @@
   }
 
   @include mq(desktop) {
-
-    max-width: 543;
+    max-width: 543px;
     flex-direction: column;
     align-items: end;
   }
@@ -64,7 +60,6 @@
       animation-iteration-count: 1;
       animation-timing-function: var(--transition-timing-function);
     }
-
   }
 
   @include mq(tablet) {
@@ -75,13 +70,13 @@
 .hero__text {
   @include mq(tablet) {
     font-size: 18px;
-    line-height: calc(28/18);
+    line-height: calc(28 / 18);
   }
 
   @include mq(desktop) {
     max-width: 344px;
     font-size: 24px;
-    line-height: calc(36/24);
+    line-height: calc(36 / 24);
   }
 }
 
@@ -97,7 +92,7 @@
 
 .hero__headline {
   font-size: 40px;
-  line-height: calc(48/40);
+  line-height: calc(48 / 40);
   font-weight: 400;
 
   @include mq(tablet) {
@@ -108,7 +103,6 @@
     font-size: 62px;
   }
 }
-
 
 .hero__text-container {
   margin-top: 5px;
@@ -152,7 +146,6 @@
       animation-iteration-count: 1;
       animation-timing-function: var(--transition-timing-function);
     }
-
   }
 
   @include mq(tablet) {
@@ -177,9 +170,6 @@
 .hero__arrow-big {
   width: 56px;
   height: 6px;
-
-
-
 
   @include mq(desktop) {
     width: 70px;
