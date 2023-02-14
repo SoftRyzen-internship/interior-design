@@ -26,7 +26,7 @@ export function openModalFeedback() {
 
 function openModal() {
   backdrop.classList.remove('is-hidden');
-  document.body.classList.add('scroll-hidden');
+  document.documentElement.classList.add('scroll-hidden');
   document.addEventListener('keydown', closeModalEsc);
   backdrop.addEventListener('click', closeModalBackdrop);
 }
@@ -35,7 +35,7 @@ function closeModal() {
   const activeEl = backdrop.querySelectorAll('.open-modal');
   Array.from(activeEl).map(item => item.classList.remove('open-modal'));
   backdrop.classList.add('is-hidden');
-  document.body.classList.remove('scroll-hidden');
+  document.documentElement.classList.remove('scroll-hidden');
   document.removeEventListener('keydown', closeModalEsc);
   backdrop.removeEventListener('click', closeModalBackdrop);
 }
