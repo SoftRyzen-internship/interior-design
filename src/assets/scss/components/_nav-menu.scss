@@ -1,17 +1,19 @@
 .nav {
   width: 100%;
   padding: 12px 0;
-  border-bottom: 1px solid #414141;
+  border-bottom: 1px solid rgba(65, 65, 65, 0.15);
 }
 
 .header {
-
+  backdrop-filter: blur(6px);
   position: fixed;
   width: 100%;
-  background-color: var(--white-txt-cl);
+  background-color: rgba(254, 254, 254, 1);
   z-index: 200;
+  transition: background-color var(--animation-speed) var(--transition-timing-function);
 
   @include mq(tablet) {
+    background: rgba(254, 254, 254, 0.25);
     background-color: transparent;
     backdrop-filter: blur(10px);
     width: 100%;
@@ -98,7 +100,7 @@
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
+    left: 1px;
     display: block;
     width: 40px;
     height: 40px;
@@ -143,6 +145,8 @@
     }
 
     .bar:last-child {
+      position: relative;
+      bottom: 1px;
       transform: rotate(-45deg);
       transition-delay: 0;
       height: 1px;
@@ -150,6 +154,7 @@
       width: 100%;
     }
   }
+
 
   @media screen and (min-width: 768px) {
     display: none;
