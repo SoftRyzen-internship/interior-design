@@ -123,6 +123,7 @@
 .projects__buttonText {
   font-size: 16px;
   line-height: 1.62;
+  white-space: nowrap;
 
   @include mq(tablet) {
     font-size: 18px;
