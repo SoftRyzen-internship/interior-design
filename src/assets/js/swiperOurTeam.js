@@ -1,23 +1,16 @@
-import Swiper, { Navigation } from 'swiper';
-
-Swiper.use(Navigation)
-
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    grabCursor: true,
-    slidesPerView: 2,
-    spaceBetween: 28,
-    loop: true,
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-        1440: {
-            slidesPerView: 3,
-            spaceBetween: 35,
+$('.swiper').slick({
+    infinite: true,
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
         }
-    }
+      }
+    ]
   });
