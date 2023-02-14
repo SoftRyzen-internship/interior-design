@@ -11,21 +11,32 @@
   }
 
 .swiper {
-  width: 508px;
   height: 306px;
-  margin: 0 auto;
-  overflow: hidden;
-
+  position: relative;
   @include mq(desktop) {
-    width: 1030px;
     height: 394px;
   }
 
-  .swiper-wrapper {
-    display: flex;
+  .slick-list {
+    width: 508px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    @include mq(desktop) {
+      width: 1030px;
+    }
   }
 
-  .swiper-slide {
+  .slick-track {
+    gap: 28px;
+
+    @include mq(desktop) {
+      gap: 32px;
+    }
+  }
+
+
+  .slick-slide {
     width: 240px;
     display: flex;
     flex-direction: column;
@@ -80,86 +91,26 @@
   }
 }
 
-.swiper-button-prev {
-  position: relative;
-  width: 44px;
-  height: 44px;
-  bottom: 180px;
+.slick-prev {
+  width: 46px;
+  height: 46px;
+  top: 90px;
+  left: 0;
 
   @include mq(desktop) {
-    bottom: 256px;
+    top: 160px;
   }
 }
 
-.swiper-button-next {
-  position: relative;
-  width: 44px;
-  height: 44px;
-  bottom: 224px;
-  left: 640px;
+.slick-next {
+  width: 46px;
+  height: 46px;
+  top: 90px;
+  right: 0;
 
   @include mq(desktop) {
-    left: 1195px;
-    bottom: 300px;
+    top: 160px;
   }
 }
 
-.swiper__btn {
-  display: block;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 1px solid black;
-  scale: 1;
-
-  transition: scale var(--animation-speed) var(--transition-timing-function);
-
-  &:hover {
-    scale: 1.1;
-  }
 }
-
-.swiper__icon-prev {
-  width: 45px;
-  height: 12px;
-  position: relative;
-  left: 20px;
-}
-
-.swiper__icon-next {
-  width: 45px;
-  height: 12px;
-  position: relative;
-  right: 20px;
-}
-
-}
-
-@keyframes animationLeft {
-  0% {opacity: 1; transform: translateX(0px) scale(1);}
-  25%{opacity: 1; transform:translateX(-22px) scale(1);}
-  26%{opacity: 0; transform:translateX(22px) scale(1);}
-  55% {opacity: 1; transform: translateX(0px) scale(1);}
-}
-
-.swiper__btn:hover .swiper__icon-prev{
-    animation-name: animationLeft;
-    animation-duration: var(--animation-speed-slow);
-    animation-iteration-count:1;
-    animation-timing-function: var(--transition-timing-function);
-}
-
-@keyframes animationRight {
-  0% {opacity: 1; transform: translateX(0px) scale(1);}
-  25%{opacity: 1; transform:translateX(19px) scale(1);}
-  26%{opacity: 0; transform:translateX(-19px) scale(1);}
-  55% {opacity: 1; transform: translateX(0px) scale(1);}
-}
-
-.swiper__btn:hover .swiper__icon-next{
-    animation-name: animationRight;
-    animation-duration: var(--animation-speed-slow);
-    animation-iteration-count:1;
-    animation-timing-function: var(--transition-timing-function);
-}
-
