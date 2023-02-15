@@ -19,19 +19,24 @@ function showMobileMenu() {
 
 function changeHeaderBackground() {
   if (window.innerWidth >= 768) {
+    header.classList.remove('add-background-mob')
+    header.classList.add('add-background-desk')
     return;
   }
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   if (scrollTop > 75 && mobileMenuBtn.classList.contains('burger-menu--opened')) {
-    header.style.backgroundColor = 'rgba(254, 254, 254, 1)';
+    header.classList.remove('add-background-desk')
+    header.classList.add('add-background-mob')
   } else {
     if (scrollTop > 75) {
-      header.style.backgroundColor = 'rgba(254, 254, 254, 0.25)';
-      return;
+      header.classList.remove('add-background-mob')
+    header.classList.add('add-background-desk')
+      
     }
   }
 
-  header.style.backgroundColor = 'rgba(254, 254, 254, 1)';
+  header.classList.remove('add-background-desk')
+  header.classList.add('add-background-mob')
 }
 
 

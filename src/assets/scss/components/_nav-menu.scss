@@ -21,6 +21,16 @@
   }
 }
 
+.add-background-desk {
+  background: rgba(254, 254, 254, 0.25);
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+}
+
+.add-background-mob {
+  background: rgba(254, 254, 254, 1);
+}
+
 .header__logo-link {
   color: var(--black-txt-cl);
   font-size: 18px;
