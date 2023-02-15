@@ -6,10 +6,8 @@
   max-height: calc(100vh - 96px);
   max-width: 375px;
   width: 90%;
-  transform: translate(-50%, -50%) scale(0.8);
-  opacity: 0;
-  transition: transform var(--animation-speed) var(--transition-timing-function),
-    opacity var(--animation-speed) var(--transition-timing-function);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform var(--animation-speed) var(--transition-timing-function);
 
   @include mq(tablet) {
     max-width: 680px;
@@ -21,7 +19,6 @@
   &.open-modal {
     height: auto;
     transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
   }
 
   &__wrapper {
