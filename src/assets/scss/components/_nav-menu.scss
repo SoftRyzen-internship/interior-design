@@ -22,14 +22,12 @@
 }
 
 .header__logo-link {
-
   color: var(--black-txt-cl);
   font-size: 18px;
 
   @include mq(desktop) {
     font-size: 24px;
   }
-
 }
 
 .header__phone {
@@ -37,11 +35,10 @@
     display: none;
   }
 
-
   @include mq(desktop) {
     display: block;
     color: var(--black-txt-cl);
-    line-height: calc(24/14);
+    line-height: calc(24 / 14);
     font-size: 16px;
   }
 }
@@ -56,7 +53,7 @@
 .header__link-link {
   font-size: 14px;
   color: var(--black-txt-cl);
-  line-height: calc(24/14);
+  line-height: calc(24 / 14);
 
   @include mq(desktop) {
     font-size: 16px;
@@ -74,7 +71,6 @@
   @include mq(tablet) {
     display: flex;
     align-items: center;
-
   }
 
   @include mq(desktop) {
@@ -93,7 +89,7 @@
   justify-content: center;
   align-items: end;
   gap: 6px;
-  transition: all .3s;
+  transition: all 0.3s;
   cursor: pointer;
 
   &:after {
@@ -113,7 +109,7 @@
   }
 
   .bar {
-    transition: width .2s;
+    transition: width 0.2s;
     height: 1px;
     width: 100%;
     background-color: var(--black-txt-cl);
@@ -125,13 +121,11 @@
 
     &:after {
       opacity: 1;
-
-
     }
 
     .bar:first-child {
       transform: rotate(45deg);
-      transition-delay: .3s;
+      transition-delay: 0.3s;
       height: 1px;
       align-self: center;
       //width: 100%;
@@ -148,19 +142,17 @@
       position: relative;
       bottom: 1px;
       transform: rotate(-45deg);
-      transition-delay: 0;
+      transition-delay: 0s;
       height: 1px;
       align-self: center;
       width: 100%;
     }
   }
 
-
   @media screen and (min-width: 768px) {
     display: none;
   }
 }
-
 
 .bar {
   background-color: black;
@@ -191,14 +183,12 @@
 .header__mobile-item {
   border-bottom: 1px solid rgba(65, 65, 65, 0.5);
   padding: 4px 0;
-
-
 }
 
 .header__mobile-link {
   color: var(--secondary-black-txt-cl);
   font-size: 18px;
-  line-height: calc(28/18);
+  line-height: calc(28 / 18);
   text-transform: uppercase;
 }
 
