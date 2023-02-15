@@ -1,5 +1,6 @@
 const btn = document.querySelectorAll('.projects__button');
 const backdrop = document.querySelector('.backdrop');
+const btnFooter = document.querySelectorAll('.contacts-socnav__btn');
 
 function openModalProjects(event) {
   const modalProjects = backdrop.querySelector('.modal-projects');
@@ -55,3 +56,14 @@ function closeModalEsc(event) {
 }
 
 Array.from(btn).forEach(item => item.addEventListener('click', openModalProjects));
+Array.from(btnFooter).forEach(item => item.addEventListener('click', openModalFooter));
+
+function openModalFooter() {
+  const modalFooter = backdrop.querySelector('.modal-footer');
+  const btnClose = modalFooter.querySelector('.modal__close');
+  const btnCloseBig = document.querySelector('.modal-footer__button');
+  modalFooter.classList.add('open-modal');
+  btnClose.addEventListener('click', closeModal);
+  btnCloseBig.addEventListener('click', closeModal);
+  openModal();
+}

@@ -91,26 +91,4 @@
   }
 }
 
-.slick-prev {
-  width: 46px;
-  height: 46px;
-  top: 90px;
-  left: 0;
-
-  @include mq(desktop) {
-    top: 160px;
-  }
-}
-
-.slick-next {
-  width: 46px;
-  height: 46px;
-  top: 90px;
-  right: 0;
-
-  @include mq(desktop) {
-    top: 160px;
-  }
-}
-
 }
