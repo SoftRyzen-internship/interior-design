@@ -146,7 +146,8 @@
       font-size: 30px;
       line-height: calc(32 / 30);
     }
-    &:hover {
+    &:hover,
+    &:focus {
       border: 1px solid var(--secondary-black-txt-cl);
       border-radius: 100px;
       .modal-feedback__icon {
