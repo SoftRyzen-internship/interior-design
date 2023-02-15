@@ -1,3 +1,15 @@
+.section__about {
+  padding-bottom: 30px;
+
+  @include mq(tablet) {
+    padding-bottom: 40px;
+  }
+
+  @include mq(desktop) {
+    padding-bottom: 50px;
+  }
+}
+
 .text-container {
   @include mq(desktop) {
     display: flex;
