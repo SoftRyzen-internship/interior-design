@@ -1,0 +1,212 @@
+.slick-track {
+  display: flex;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-dots {
+  position: absolute;
+  z-index: 100;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: grid;
+  grid-template-columns: repeat(5, 20px);
+  gap: 18px;
+
+  @include mq(tablet) {
+    bottom: 32px;
+  }
+}
+
+.slick-dots li {
+  list-style: none;
+
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+.slick-dots button {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+  text-indent: -999em;
+  border-radius: 50%;
+  border: none;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: block;
+    content: '';
+    width: 4px;
+    height: 4px;
+    text-indent: -999em;
+    border-radius: 50%;
+    background-color: var(--white-txt-cl);
+  }
+}
+
+.slick-dots li.slick-active button {
+  border: 1px solid var(--white-txt-cl);
+}
+
+.slick-arrow {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  font-size: 0;
+  border-radius: 50%;
+  border: 1px solid var(--black-txt-cl);
+  z-index: 400;
+  transition: transform var(--animation-speed) var(--transition-timing-function);
+
+  @include mq(tablet-only) {
+    transform: translateY(100%);
+  }
+
+  @include mq(desktop) {
+    transform: translateY(-50%);
+  }
+
+  &:hover {
+    @include mq(tablet) {
+      transform: translateY(100%) scale(1.1);
+    }
+    @include mq(desktop) {
+      transform: translateY(-50%) scale(1.1);
+    }
+  }
+
+  &::after {
+    display: block;
+    width: 46px;
+    height: 15px;
+    content: '';
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.slick-next::after {
+    left: 0;
+    background-image: url('../images/slider-next.svg');
+  }
+
+  &.slick-prev::after {
+    left: 100%;
+    background-image: url('../images/slider-prev.svg');
+  }
+}
+
+.sliderModal {
+  .slick-arrow {
+    @include mq(tablet-only) {
+      bottom: -25px;
+    }
+
+    @include mq(desktop) {
+      top: 50%;
+    }
+  }
+
+  .slick-arrow.slick-next {
+    right: 40px;
+
+    @include mq(desktop) {
+      right: 80px;
+    }
+  }
+
+  .slick-arrow.slick-prev {
+    left: 40px;
+
+    @include mq(desktop) {
+      left: 80px;
+    }
+  }
+}
+
+.swiper-wrapper__section {
+  .slick-arrow {
+    @include mq(tablet) {
+      top: 84px;
+    }
+
+    @include mq(desktop) {
+      top: 160px;
+    }
+  }
+
+  .slick-arrow.slick-prev {
+    left: 0;
+  }
+
+  .slick-arrow.slick-next {
+    right: 0;
+  }
+}
+
+@keyframes animationLeft {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  25% {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
+  26% {
+    opacity: 0;
+    transform: translate(-100%, -50%);
+  }
+  55% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.slick-next:hover::after {
+  animation-name: animationLeft;
+  animation-duration: var(--animation-speed-slow);
+  animation-iteration-count: 1;
+  animation-timing-function: var(--transition-timing-function);
+}
+
+@keyframes animationRight {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  25% {
+    opacity: 1;
+    transform: translate(-100%, -50%);
+  }
+  26% {
+    opacity: 0;
+    transform: translate(0, -50%);
+  }
+  55% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.slick-prev:hover::after {
+  animation-name: animationRight;
+  animation-duration: var(--animation-speed-slow);
+  animation-iteration-count: 1;
+  animation-timing-function: var(--transition-timing-function);
+}
