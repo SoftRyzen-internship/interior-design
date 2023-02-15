@@ -12,9 +12,6 @@
     font-display: $display;
   }
 }
-/* Usage
-@include font-face ('Acrom', '../fonts/Acrom/Acrom-Thin', 100);
-    */
 
 /* SET REM FUNCTION */
 @function rem($px) {
@@ -62,10 +59,4 @@
     }
   }
 }
-/*  Usage
-.block {
-    @include mq(mobile) {
-        margin-bottom: 16px;
-    };
-  }
-*/
+
