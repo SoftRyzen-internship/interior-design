@@ -53,10 +53,17 @@
   flex-shrink: 0;
   overflow: hidden;
 
+  @keyframes animationRightHero {
+    0% {opacity: 1; transform: translateX(0px) scale(1);}
+    25%{opacity: 1; transform:translateX(19px) scale(1);}
+    26%{opacity: 0; transform:translateX(-19px) scale(1);}
+    55% {opacity: 1; transform: translateX(0px) scale(1);}
+  }
+
   &:hover {
     .hero__arrow-big {
-      animation-name: animationRight;
-      animation-duration: 1.4s;
+      animation-name: animationRightHero;
+      animation-duration: var(--animation-speed-slow);
       animation-iteration-count: 1;
       animation-timing-function: var(--transition-timing-function);
     }
@@ -141,8 +148,8 @@
 
   &:hover {
     .hero__arrow-big {
-      animation-name: animationRight;
-      animation-duration: 1.4s;
+      animation-name: animationRightHero;
+      animation-duration: var(--animation-speed-slow);
       animation-iteration-count: 1;
       animation-timing-function: var(--transition-timing-function);
     }
