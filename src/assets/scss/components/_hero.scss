@@ -36,9 +36,10 @@
   }
 
   @include mq(desktop) {
-    max-width: 543px;
+    max-width: 484px;
     flex-direction: column;
     align-items: end;
+    padding: 0px
   }
 }
 
