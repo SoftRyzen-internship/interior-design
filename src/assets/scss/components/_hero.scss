@@ -37,7 +37,7 @@
   @include mq(desktop) {
     max-width: 484px;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
     padding: 0px
   }
 }
@@ -188,6 +188,6 @@
   @include mq(desktop) {
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
   }
 }
