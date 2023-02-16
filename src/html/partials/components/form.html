@@ -8,7 +8,7 @@
         name="name"
         type="text"
         placeholder=" "
-        data-reg="^[a-zA-Z][a-zA-Z-\s]{1,}$"
+        data-reg="^[a-zA-Z][a-zA-Z-\s]{1,62}$"
       />
       <label class="form__label form__label--name" for="name">Name*</label>
       <p class="form__error">Name is required</p>
@@ -24,7 +24,7 @@
         data-reg="\+?\d{6}"
       />
       <label class="form__label form__label--phone" for="phone">Contact number*</label>
-      <p class="form__error">Please enter your number in correct format +44 YYYY XXXXXX</p>
+      <p class="form__error">Please enter your number in format +44 YYYY XXXXXX</p>
     </div>
     <div class="form__line">
       <input class="form__input" id="message" autocomplete="off" name="message" placeholder=" " />
