@@ -132,13 +132,12 @@
   }
 
   &__button {
+    padding-left: 12px;
     color: var(--black-txt-cl);
-    padding-left: 11px;
     border: 1px solid transparent;
     border-radius: 100px;
     display: inline-flex;
     align-items: center;
-    gap: 12px;
     transition: border var(--transition-timing-function) var(--animation-speed);
     font-size: 18px;
     line-height: calc(30 / 18);
@@ -148,7 +147,6 @@
     }
     @include mq(desktop) {
       padding-left: 26px;
-      gap: 20px;
       font-size: 30px;
       line-height: calc(32 / 30);
     }
@@ -158,6 +156,17 @@
       .modal-footer__icon {
         border: 1px solid transparent;
       }
+    }
+  }
+  &__span {
+    @media screen and (max-width: 330px) {
+      max-width: 120px;
+    }
+    @media screen and (min-width: 330px) {
+      margin-right: 12px;
+    }
+    @include mq(desktop) {
+      margin-right: 20px;
     }
   }
   &__icon {
