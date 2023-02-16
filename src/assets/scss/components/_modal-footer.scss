@@ -29,7 +29,7 @@
     @include mq(tablet) {
       display: flex;
       flex-direction: column;
-      justify-content: end;
+      justify-content: flex-end;
       height: calc(100vh - 120px);
       background-image: url('../images/footer/footer-tab.jpg');
       background-repeat: no-repeat;
