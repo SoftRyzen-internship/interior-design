@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 32px;
 
   @include mq(tablet) {
     display: none;
@@ -13,6 +12,10 @@
     width: 240px;
 
     transition: opacity var(--animation-speed) var(--transition-timing-function);
+
+    &:not(:first-child) {
+      margin-top: 32px;
+    }
   }
 
   .team__text-wrapper {
@@ -33,7 +36,6 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 28px;
   margin-top: 32px;
 
   @include mq(tablet) {
@@ -47,6 +49,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 28px;
   border-radius: 50%;
   border: 1px solid var(--black-txt-cl);
 }
