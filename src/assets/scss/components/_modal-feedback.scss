@@ -132,7 +132,6 @@
     border-radius: 100px;
     display: inline-flex;
     align-items: center;
-    gap: 12px;
     transition: border var(--transition-timing-function) var(--animation-speed);
     font-size: 18px;
     line-height: calc(30 / 18);
@@ -142,9 +141,14 @@
     }
     @include mq(desktop) {
       padding-left: 26px;
-      gap: 20px;
       font-size: 30px;
       line-height: calc(32 / 30);
+    }
+    & span {
+      margin-right: 12px;
+      @include mq(desktop) {
+        margin-right: 20px;
+      }
     }
     &:hover,
     &:focus {

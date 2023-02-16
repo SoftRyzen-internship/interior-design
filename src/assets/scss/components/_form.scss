@@ -5,8 +5,13 @@
     justify-content: space-between;
   }
   @include mq(desktop) {
-    gap: 210px;
     justify-content: flex-start;
+  }
+
+  &__menu {
+    @include mq(desktop) {
+      margin-right: 210px;
+    }
   }
 
   &__line {
@@ -93,21 +98,28 @@
     border-radius: 100px;
     display: inline-flex;
     align-items: center;
-    gap: 20px;
     line-height: calc(26 / 16);
     transition: border var(--transition-timing-function) var(--animation-speed);
     @include mq(tablet) {
       padding-left: 12px;
-      gap: 32px;
       font-size: 18px;
       line-height: calc(26 / 18);
     }
     @include mq(desktop) {
       padding-left: 20px;
-      gap: 43px;
       font-size: 24px;
       line-height: calc(32 / 24);
     }
+    & span {
+      margin-right: 20px;
+      @include mq(tablet) {
+        margin-right: 32px;
+      }
+      @include mq(desktop) {
+        margin-right: 43px;
+      }
+    }
+
     &:hover,
     &:focus {
       border: 1px solid var(--secondary-black-txt-cl);
