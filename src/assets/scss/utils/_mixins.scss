@@ -1,4 +1,4 @@
-/* FONT-FASE */
+
 @mixin font-face($font-name, $path, $weight: 400, $style: normal, $display: swap) {
   @font-face {
     font-family: quote($font-name); /* IE9 Compat Modes */
@@ -13,12 +13,6 @@
   }
 }
 
-/* SET REM FUNCTION */
-@function rem($px) {
-  @return ($px / 16) + rem;
-}
-
-/* MEDIA QUERIES*/
 @mixin mq($range) {
   $mobile: 375px;
   $tablet: 768px;

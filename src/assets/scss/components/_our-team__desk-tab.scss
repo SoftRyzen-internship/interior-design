@@ -27,13 +27,13 @@
     }
   }
 
-  .slick-track {
+ /*  .slick-track {
     gap: 28px;
 
     @include mq(desktop) {
       gap: 32px;
     }
-  }
+  } */
 
 
   .slick-slide {
@@ -42,6 +42,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+    &:not(:first-child) {
+      margin-left: 28px;
+
+      @include mq(desktop) {
+        margin-left: 32px;
+      }
+    }
 
     @include mq(desktop) {
       width: 320px;
