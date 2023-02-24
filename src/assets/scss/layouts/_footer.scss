@@ -171,6 +171,7 @@
 .logo-footer__box {
   margin-top: 65px;
   display: flex;
+  align-items: baseline;
   justify-content: center;
 
   @include mq(tablet) {
@@ -178,6 +179,17 @@
   }
   @include mq(desktop) {
     margin-top: 47px;
+  }
+}
+
+.logo-footer__text {
+  color: var(--secondary-black-txt-cl);
+  margin-right: 4px;
+  font-size: 12px;
+  line-height: 2;
+  @include mq(tablet) {
+    font-size: 14px;
+    line-height: 1.71;
   }
 }
 
