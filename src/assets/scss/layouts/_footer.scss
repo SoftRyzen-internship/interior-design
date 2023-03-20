@@ -16,7 +16,6 @@
 .footer-box {
   @include mq(tablet) {
     display: flex;
-    justify-content: space-between;
   }
 }
 
@@ -47,13 +46,26 @@
   @include mq(tablet) {
     display: inline-flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: baseline;
     min-width: 500px;
+    margin-left: 76px;
   }
 
   @include mq(desktop) {
     min-width: 900px;
+    margin-left: 194px;
+  }
+
+  .footer__created-by-mob {
+    display: block;
+    color: var(--light-grey-txt-cl);
+    font-size: 10px;
+    line-height: calc(12 / 10);
+    margin-bottom: 22px;
+
+    @include mq(tablet) {
+      display: none;
+    }
   }
 }
 
@@ -61,6 +73,22 @@
   @include mq(mobile-only) {
     &:not(:last-child) {
       margin-bottom: 40px;
+    }
+  }
+  @include mq(tablet) {
+    &:nth-child(2) {
+      margin-left: 77px;
+    }
+    &:nth-child(3) {
+      margin-left: 56px;
+    }
+  }
+  @include mq(desktop) {
+    &:nth-child(2) {
+      margin-left: 204px;
+    }
+    &:nth-child(3) {
+      margin-left: 177px;
     }
   }
 }
@@ -71,7 +99,7 @@
   font-size: 18px;
   line-height: 1.56;
 
-  margin-bottom: 16px;
+  margin-bottom: 22px;
 
   @include mq(mobile-only) {
     text-align: center;
@@ -80,6 +108,7 @@
   @include mq(desktop) {
     font-size: 20px;
     line-height: 1.5;
+    margin-bottom: 24px;
   }
 }
 
@@ -169,27 +198,26 @@
 }
 
 .logo-footer__box {
-  margin-top: 65px;
   display: flex;
+  flex-direction: column;
   align-items: baseline;
-  justify-content: center;
-
-  @include mq(tablet) {
-    margin-top: 25px;
-  }
-  @include mq(desktop) {
-    margin-top: 47px;
-  }
 }
 
 .logo-footer__text {
-  color: var(--secondary-black-txt-cl);
-  margin-right: 4px;
-  font-size: 12px;
-  line-height: 2;
+  display: none;
+
   @include mq(tablet) {
-    font-size: 14px;
-    line-height: 1.71;
+    display: block;
+    color: var(--light-grey-txt-cl);
+    margin-top: 22px;
+    font-size: 10px;
+    line-height: calc(12 / 10);
+  }
+
+  @include mq(desktop) {
+    font-size: 12px;
+    margin-top: 24px;
+    line-height: calc(14 / 12);
   }
 }
 
