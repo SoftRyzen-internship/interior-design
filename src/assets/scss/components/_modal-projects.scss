@@ -114,7 +114,13 @@
   margin-right: auto;
 
   @include mq(desktop) {
-    width: 1120px;
+    width: 938px;
+  }
+
+  .sliderModal__item:nth-child(3) & {
+    @include mq(desktop) {
+      width: 826px;
+    }
   }
 }
 
