@@ -8,5 +8,6 @@ $('.slider').slick({
 $('.sliderModal').slick({
   speed: 300,
   cssEase: 'ease-in-out',
-  variableWidth: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
 });
