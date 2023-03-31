@@ -16,7 +16,7 @@
   }
 
   @include mq(desktop) {
-    width: 1280px;
+    width: 1154px;
     max-height: 98%;
     overflow: hidden;
     padding: 60px 80px 60px;
@@ -95,7 +95,7 @@
   margin-bottom: 24px;
 
   @include mq(desktop) {
-    width: 1120px;
+    width: 740px;
     max-height: 60vh;
   }
 }
@@ -114,8 +114,9 @@
   margin-right: auto;
 
   @include mq(desktop) {
-    width: 1120px;
+    width: 740px;
   }
+
 }
 
 .modal-projects__list {
